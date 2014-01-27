@@ -1,0 +1,86 @@
+﻿@using GoKeyboard.DTO
+@using Tools.Utils
+@model GoKeyboard.DTO.GkLesson
+@{
+    ViewBag.Title = "Index";
+}
+@*<div id="chartdebugPlaceHolder"></div>*@
+<div id="lesson">
+    <h1>@Model.Name</h1>
+    <div class="row">
+        @{int pageIndex = 0; int nextLesson = @Model.GkLessonId + 1; int charIndex = 0;}
+        <div class="col-md-3">
+            <input class="infinite" data-width="100%" data-height="100%" data-thickness="0.05" data-fgcolor="#6f80b7" data-bgcolor="#FFFFFF" data-readonly=true data-max="180">
+            <input class="bonus" data-width="50%" data-height="50%" data-thickness="0.25" data-fgcolor="#ffc600" data-bgcolor="#FFFFFF" data-readonly=true data-max="@Model.CharsAmount" data-displayinput="true">
+            <span id="timer"></span>
+        </div>
+        <div class="col-md-9">
+            @foreach (GkLessonPage lessonPage in @Model.LessonPages)
+            {
+                pageIndex++;
+                <div class="page">
+                    @*<h3>Page @pageIndex</h3>*@
+                    @foreach (char item in lessonPage.Text)
+                    {
+                        @Html.Partial("CharViewPartial", new GoKeyboardRest.Api.Models.LessonItemCharViewModel { Char = item, Index = charIndex })
+                        charIndex++;
+                    }
+                </div>
+            }
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="col-md-8">@Html.Partial("~/Views/Partials/KeyboardHelper.cshtml", new GoKeyboardRest.Api.Models.KeyboardHelperViewModel(Model))</div>
+                    <div class="col-md-2"></div>
+
+                </div>
+        </div>
+        <div class="endpage">
+            <h2>Bravo ! </h2>
+            <p>Vous avez fait <span id="totalErrorCount"></span> erreur(s) en <span id="timeSpent"></span>s</p>
+            <p>Vous avez tapé <span id="charsTyped"></span> caractères à raison de <span id="charsTypedPerMinute"></span> caractères par minute.</p>
+            <p>Voici la répartition des erreurs que vous avez faites :</p>
+            <div id="chartplaceholder"></div>
+        </div>
+        @Html.Partial("~/Views/Partials/PreLessonPopin.cshtml")
+    </div>
+    <a href="@Url.Action("Index")" class="btn btn-default">Menu principal</a>
+    <a href="javascript:window.location.href = window.location.href;" class="btn btn-default">Réessayer</a>
+    <a href="@Url.Action("Lesson", new { id = nextLesson })" class="btn btn-default">Leçon suivante</a>
+    <a href="javascript:nextPage();" class="btn btn-default">Page suivante</a>
+
+    @section scripts
+{
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Sound.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/Timer.js")"></script>
+        <script type="text/javascript" src="@Url.Content("~/Scripts/LessonEngine.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.flot.js")"></script>
+        <script src="@Url.Content("~/Scripts/jquery.flot.categories.js")"></script>
+
+        <script>
+            var sounds =
+            {
+                @*"n1":'@Url.Content("~/Content/Sounds/new/s (1).mp3")',
+		"n2":'@Url.Content("~/Content/Sounds/new/s (2).mp3")',
+		"n3":'@Url.Content("~/Content/Sounds/new/s (3).mp3")',
+		"n4":'@Url.Content("~/Content/Sounds/new/s (4).mp3")',
+		"n5":'@Url.Content("~/Content/Sounds/new/s (5).mp3")',
+		"n6":'@Url.Content("~/Content/Sounds/new/s (6).mp3")',
+		"n7": '@Url.Content("~/Content/Sounds/new/s (7).mp3")',*@
+                "win": '@Url.Content("~/Content/Sounds/new/win.mp3")',
+                "miss": '@Url.Content("~/Content/Sounds/new/miss.mp3")'
+            };
+
+            $(function ()
+            {
+                $(".infinite").knob({});
+                $(".bonus").knob({});
+
+                var engine = new LessonEngine();
+                engine.sounds = sounds;
+                engine.Init();
+                engine.totalCharsAmount = @Model.CharsAmount;
+                ShowPopinBase();
+            });
+
+        </script>
+    }

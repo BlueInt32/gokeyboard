@@ -1,0 +1,37 @@
+﻿@model string
+@* Nom du folder de sound set *@
+	
+@switch (Model)
+{
+	case "new":
+		@:var notes =
+		@:{
+		@:	"n1":'@Url.Content("~/Content/Sounds/new/s (1).mp3")',
+		@:	"n2":'@Url.Content("~/Content/Sounds/new/s (2).mp3")',
+		@:	"n3":'@Url.Content("~/Content/Sounds/new/s (3).mp3")',
+		@:	"n4":'@Url.Content("~/Content/Sounds/new/s (4).mp3")',
+		@:	"n5":'@Url.Content("~/Content/Sounds/new/s (5).mp3")',
+		@:	"n6":'@Url.Content("~/Content/Sounds/new/s (6).mp3")',
+		@:	"n7": '@Url.Content("~/Content/Sounds/new/s (7).mp3")',
+		@:	"win": '@Url.Content("~/Content/Sounds/new/win.mp3")',
+		@:	"miss": '@Url.Content("~/Content/Sounds/new/miss.mp3")'
+		@:};
+		break;
+		case "Ensemble":
+		@:var notes =
+		@:{
+		@:	"n1":'@Url.Content("~/Content/Sounds/Ensemble/C.mp3")',
+		@:	"n2":'@Url.Content("~/Content/Sounds/Ensemble/D.mp3")',
+		@:	"n3":'@Url.Content("~/Content/Sounds/Ensemble/E.mp3")',
+		@:	"n4":'@Url.Content("~/Content/Sounds/Ensemble/F.mp3")',
+		@:	"n5":'@Url.Content("~/Content/Sounds/Ensemble/G.mp3")',
+		@:	"n6":'@Url.Content("~/Content/Sounds/Ensemble/A.mp3")',
+		@:	"n7": '@Url.Content("~/Content/Sounds/Ensemble/B.mp3")',
+		@:	"win": '@Url.Content("~/Content/Sounds/Ensemble/win.mp3")',
+		@:	"miss": '@Url.Content("~/Content/Sounds/Ensemble/miss.mp3")'
+		@:};
+		break;
+}
+	   
+
+

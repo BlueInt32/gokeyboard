@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Stats";
+}
+
+<h2>Stats</h2>
+
+
+<span class="sparklines" values="1,2,3,4,5,4,3,2,1"></span>
+
+@section scripts
+{
+	<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.sparkline.min.js")"></script>
+	
+	<script>
+		$(function() {
+			//$('.sparklines').sparkline('html', {
+			//	type: 'bar',
+			//	barColor: 'red',
+			//	width: '300px',
+			//	height: '100px',
+			//});
+			$('.sparklines').sparkline([[1, 4], [2, 3], [3, 2], [4, 1]], { type: 'bar', barWidth: '20px', height: '100px', stackedBarColor: ['#c1e2f5', '#8dc3e3'] });
+			//$('.inlinebar').sparkline();
+		});
+
+	</script>
+}

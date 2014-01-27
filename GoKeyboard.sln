@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoKeyboard.Webapp", "GoKeyboard.Webapp\GoKeyboard.Webapp.csproj", "{81941D53-5EE1-43E4-9A8F-5237C6D12947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoKeyboard.DTO", "GoKeyboard.DTO\GoKeyboard.DTO.csproj", "{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoKeyboard.DAL", "GoKeyboard.DAL\GoKeyboard.DAL.csproj", "{4A779E53-621B-4A26-961D-2C76AF31FDBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tools", "..\Tools\Tools.csproj", "{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordListManager", "WordListManager\WordListManager.csproj", "{C6743F60-EA13-4094-92A9-7E033C43F4F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoKeyboard.LessonFactory", "GoKeyboard.LessonFactory\GoKeyboard.LessonFactory.csproj", "{AE8E9861-15CD-4E88-B326-C5BE33CAA483}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Prerelease|Any CPU = Prerelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81941D53-5EE1-43E4-9A8F-5237C6D12947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81941D53-5EE1-43E4-9A8F-5237C6D12947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81941D53-5EE1-43E4-9A8F-5237C6D12947}.Prerelease|Any CPU.ActiveCfg = Release|Any CPU
+		{81941D53-5EE1-43E4-9A8F-5237C6D12947}.Prerelease|Any CPU.Build.0 = Release|Any CPU
+		{81941D53-5EE1-43E4-9A8F-5237C6D12947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81941D53-5EE1-43E4-9A8F-5237C6D12947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}.Prerelease|Any CPU.ActiveCfg = Release|Any CPU
+		{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}.Prerelease|Any CPU.Build.0 = Release|Any CPU
+		{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A779E53-621B-4A26-961D-2C76AF31FDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A779E53-621B-4A26-961D-2C76AF31FDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A779E53-621B-4A26-961D-2C76AF31FDBD}.Prerelease|Any CPU.ActiveCfg = Release|Any CPU
+		{4A779E53-621B-4A26-961D-2C76AF31FDBD}.Prerelease|Any CPU.Build.0 = Release|Any CPU
+		{4A779E53-621B-4A26-961D-2C76AF31FDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A779E53-621B-4A26-961D-2C76AF31FDBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}.Prerelease|Any CPU.ActiveCfg = Prerelease|Any CPU
+		{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}.Prerelease|Any CPU.Build.0 = Prerelease|Any CPU
+		{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6743F60-EA13-4094-92A9-7E033C43F4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6743F60-EA13-4094-92A9-7E033C43F4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6743F60-EA13-4094-92A9-7E033C43F4F0}.Prerelease|Any CPU.ActiveCfg = Release|Any CPU
+		{C6743F60-EA13-4094-92A9-7E033C43F4F0}.Prerelease|Any CPU.Build.0 = Release|Any CPU
+		{C6743F60-EA13-4094-92A9-7E033C43F4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6743F60-EA13-4094-92A9-7E033C43F4F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE8E9861-15CD-4E88-B326-C5BE33CAA483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE8E9861-15CD-4E88-B326-C5BE33CAA483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE8E9861-15CD-4E88-B326-C5BE33CAA483}.Prerelease|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8E9861-15CD-4E88-B326-C5BE33CAA483}.Prerelease|Any CPU.Build.0 = Release|Any CPU
+		{AE8E9861-15CD-4E88-B326-C5BE33CAA483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE8E9861-15CD-4E88-B326-C5BE33CAA483}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

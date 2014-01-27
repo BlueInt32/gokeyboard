@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="89FAAC16-64C6-4488-9A98-DEAD375710E9" ModuleId="GoKeyboard" />
+  <Module PersistentId="24C10E33-B08F-458A-BC33-95571384D229" ModuleId="GoKeyboard.Api" />
+  <Module PersistentId="61613A5C-5E5C-43AC-A303-41FA164D4FD8" ModuleId="GoKeyboard.Api_1" />
+</Modules>

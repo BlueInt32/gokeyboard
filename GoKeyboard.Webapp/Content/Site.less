@@ -1,0 +1,360 @@
+﻿@import "mixin.less";
+
+
+
+//    /$$$$$$   /$$$$$$  /$$      /$$ /$$      /$$  /$$$$$$  /$$   /$$
+//   /$$__  $$ /$$__  $$| $$$    /$$$| $$$    /$$$ /$$__  $$| $$$ | $$
+//  | $$  \__/| $$  \ $$| $$$$  /$$$$| $$$$  /$$$$| $$  \ $$| $$$$| $$
+//  | $$      | $$  | $$| $$ $$/$$ $$| $$ $$/$$ $$| $$  | $$| $$ $$ $$
+//  | $$      | $$  | $$| $$  $$$| $$| $$  $$$| $$| $$  | $$| $$  $$$$
+//  | $$    $$| $$  | $$| $$\  $ | $$| $$\  $ | $$| $$  | $$| $$\  $$$
+//  |  $$$$$$/|  $$$$$$/| $$ \/  | $$| $$ \/  | $$|  $$$$$$/| $$ \  $$
+//   \______/  \______/ |__/     |__/|__/     |__/ \______/ |__/  \__/
+body 
+{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background:url(images/hoffman.png) !important;
+    .body-content 
+    {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    input, select, textarea 
+    {
+        max-width: 280px;
+    }
+}
+
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*BUTTONS*/
+
+
+.button {
+    background-color:#3bb3e0;
+    font-family: 'Open Sans', sans-serif;
+    font-size:33px;
+    text-decoration:none;
+    color:#fff;
+    position:relative;
+    padding: 0px 5px;
+    border-left:solid 1px #2ab7ec;
+    margin-left:35px;
+    background-image: linear-gradient(to bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785,0px 7px 2px #102A33;
+    width: 94px;
+    display: block;
+    height: 74px;
+    line-height: 74px;
+}
+ 
+.button:active {
+    top:3px;
+    background-image: linear-gradient(to bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785,0px 4px 2px #102A33;
+}
+.button:hover {
+    text-decoration: none;
+}
+
+.button::before {
+    content: attr(data-num);
+    width:35px;
+    height:100%;
+    position:absolute;
+    display:block;
+    padding-top:0px;
+    top:0px;
+    left:-36px;
+    font-size:16px;
+    font-weight:bold;
+    color:#8fd1ea;
+    text-shadow:1px 1px 0px #07526e;
+    border-right:solid 1px #07526e;
+    background-image: linear-gradient(to bottom, rgb(10,94,125) 0%, rgb(14,139,184) 100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a,0px 7px 2px #102A33;
+    line-height: 74px;
+}
+ 
+.button:active::before {
+    top:-3px;
+    box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b,0px 7px 2px #102A33;
+}
+
+footer 
+{
+    font-size:0.4em;
+}
+
+
+//   /$$       /$$$$$$$$  /$$$$$$   /$$$$$$   /$$$$$$  /$$   /$$
+//  | $$      | $$_____/ /$$__  $$ /$$__  $$ /$$__  $$| $$$ | $$
+//  | $$      | $$      | $$  \__/| $$  \__/| $$  \ $$| $$$$| $$
+//  | $$      | $$$$$   |  $$$$$$ |  $$$$$$ | $$  | $$| $$ $$ $$
+//  | $$      | $$__/    \____  $$ \____  $$| $$  | $$| $$  $$$$
+//  | $$      | $$       /$$  \ $$ /$$  \ $$| $$  | $$| $$\  $$$
+//  | $$$$$$$$| $$$$$$$$|  $$$$$$/|  $$$$$$/|  $$$$$$/| $$ \  $$
+//  |________/|________/ \______/  \______/  \______/ |__/  \__/
+#lesson 
+{ 
+    margin:0px auto; 
+	width: 100%;
+    font-size:32px; 
+    background-color: #EEE;
+    .borderradius(5px);
+    padding: 30px;
+    #timer { font-size:0.5em; display:none; }
+    h1 { font-size:45px;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+    h2 {font-size:1em;}
+    p {font-size:0.6em;}
+    #chartplaceholder { width:400px; height: 300px;}
+
+    .page 
+    {
+        .borderradius(5px);
+        border:1px solid #999;
+        margin:  0px 0px 20px 0px;
+        padding:0px 10px 0px;
+        background: #EEE;
+        span
+        {
+            //background: #75a4bf;
+            font-family: "Lucida Console";
+            line-height: 65px;
+            margin: -6px;
+            padding: 5px;
+            transition: background 0.15s;
+            .borderradius;
+            &.activeItem
+            {
+                background: @currentItemBlue;
+                transition: background 0.15s;
+            }
+            &.error
+            {
+                background: #F00!important;
+                transition: background 0.15s;
+            }
+        }
+        div.spacer
+        {
+            
+        }
+    }
+    .endpage
+    {
+        display: none;
+    }
+}
+#chartdebugPlaceHolder {position:absolute; top:300px; right:30px;width:300px; height: 200px;}
+
+//   /$$       /$$$$$$$$  /$$$$$$   /$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$          /$$       /$$$$$$  /$$$$$$  /$$$$$$$$
+//  | $$      | $$_____/ /$$__  $$ /$$__  $$ /$$__  $$| $$$ | $$ /$$__  $$        | $$      |_  $$_/ /$$__  $$|__  $$__/
+//  | $$      | $$      | $$  \__/| $$  \__/| $$  \ $$| $$$$| $$| $$  \__/        | $$        | $$  | $$  \__/   | $$   
+//  | $$      | $$$$$   |  $$$$$$ |  $$$$$$ | $$  | $$| $$ $$ $$|  $$$$$$  /$$$$$$| $$        | $$  |  $$$$$$    | $$   
+//  | $$      | $$__/    \____  $$ \____  $$| $$  | $$| $$  $$$$ \____  $$|______/| $$        | $$   \____  $$   | $$   
+//  | $$      | $$       /$$  \ $$ /$$  \ $$| $$  | $$| $$\  $$$ /$$  \ $$        | $$        | $$   /$$  \ $$   | $$   
+//  | $$$$$$$$| $$$$$$$$|  $$$$$$/|  $$$$$$/|  $$$$$$/| $$ \  $$|  $$$$$$/        | $$$$$$$$ /$$$$$$|  $$$$$$/   | $$   
+//  |________/|________/ \______/  \______/  \______/ |__/  \__/ \______/         |________/|______/ \______/    |__/   
+
+
+ul#lessonsList
+{
+    list-style: none;
+    width: 840px;
+
+    li
+    {
+        float:left;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        position:relative;
+        height: 88px;
+    }
+}
+
+//   /$$   /$$                     /$$                                           /$$ /$$   /$$           /$$                              
+//  | $$  /$$/                    | $$                                          | $$| $$  | $$          | $$                              
+//  | $$ /$$/   /$$$$$$  /$$   /$$| $$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$   /$$$$$$$| $$  | $$  /$$$$$$ | $$  /$$$$$$   /$$$$$$   /$$$$$$ 
+//  | $$$$$/   /$$__  $$| $$  | $$| $$__  $$ /$$__  $$ |____  $$ /$$__  $$ /$$__  $$| $$$$$$$$ /$$__  $$| $$ /$$__  $$ /$$__  $$ /$$__  $$
+//  | $$  $$  | $$$$$$$$| $$  | $$| $$  \ $$| $$  \ $$  /$$$$$$$| $$  \__/| $$  | $$| $$__  $$| $$$$$$$$| $$| $$  \ $$| $$$$$$$$| $$  \__/
+//  | $$\  $$ | $$_____/| $$  | $$| $$  | $$| $$  | $$ /$$__  $$| $$      | $$  | $$| $$  | $$| $$_____/| $$| $$  | $$| $$_____/| $$      
+//  | $$ \  $$|  $$$$$$$|  $$$$$$$| $$$$$$$/|  $$$$$$/|  $$$$$$$| $$      |  $$$$$$$| $$  | $$|  $$$$$$$| $$| $$$$$$$/|  $$$$$$$| $$      
+//  |__/  \__/ \_______/ \____  $$|_______/  \______/  \_______/|__/       \_______/|__/  |__/ \_______/|__/| $$____/  \_______/|__/      
+//                       /$$  | $$                                                                          | $$                          
+//                      |  $$$$$$/                                                                          | $$                          
+//                       \______/                                                                           |__/                          
+
+
+#keyboardhelper 
+{ 
+    font-size:0.6em;
+    position:relative; 
+    height: 216px;
+    background: #CCC;
+    width: 490px;
+    .borderradius(5px);
+    .boxshadow(-1px, -1px, 1px, 2px, #666, inset);
+
+    div
+    {
+        position:absolute;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        .borderradius(5px);
+        .boxshadow(-1px, -1px, 1px, 2px, #777, inset);
+        background-color:#CCC;
+        text-align: center;
+
+        @baseLeftOffset: 10px;
+        @baseTopOffset: 10px;
+
+        @yDelta: 40px;
+        @xDelta : 40px;
+
+        @topOffsetLine1: 0 + @baseTopOffset;
+        @topOffsetLine2: @yDelta + @baseTopOffset;
+        @topOffsetLine3: 2 * @yDelta + @baseTopOffset;
+        @topOffsetLine4: 3 * @yDelta + @baseTopOffset;
+        @topOffsetLine5: 4 * @yDelta + @baseTopOffset;
+
+        @leftOffsetLine1: 30px + @baseLeftOffset;
+        @leftOffsetLine2: 0px + @baseLeftOffset;
+        @leftOffsetLine3: 20px + @baseLeftOffset;
+        @leftOffsetLine4: 40px + @baseLeftOffset;
+        @leftOffsetLine5: 105px + @baseLeftOffset;
+
+        &.row1 { top:@topOffsetLine1; }
+        &.row2{ top:@topOffsetLine2; }
+        &.row3{ top:@topOffsetLine3; }
+        &.row4{ top:@topOffsetLine4; }
+        &.key_spacebar { top:@topOffsetLine5; left:@leftOffsetLine5; width:320px; } 
+
+        &.key_eacute    { left: @leftOffsetLine1;}
+        &.key_quot      { left: @leftOffsetLine1 +  1 * @xDelta;} 
+        &.key_apos      { left: @leftOffsetLine1 +  2 * @xDelta;}
+        &.key_lpar      { left: @leftOffsetLine1 +  3 * @xDelta;}
+        &.key_minus     { left: @leftOffsetLine1 +  4 * @xDelta;}
+        &.key_eagrave   { left: @leftOffsetLine1 + 5 * @xDelta;}
+        &.key_underscore{ left: @leftOffsetLine1 + 6 * @xDelta;}
+        &.key_ccedil    { left: @leftOffsetLine1 +  7 * @xDelta;}
+        &.key_agrave    { left: @leftOffsetLine1 +  8 * @xDelta;}
+        &.key_rpar      { left: @leftOffsetLine1 +  9 * @xDelta;}
+        &.key_equals    { left: @leftOffsetLine1 +  10 * @xDelta;}
+
+        &.key_a{ left: @leftOffsetLine2 }
+        &.key_z{ left: @leftOffsetLine2 + 1 * @xDelta;}
+        &.key_e{ left: @leftOffsetLine2 + 2 * @xDelta; }
+        &.key_r{ left: @leftOffsetLine2 + 3 * @xDelta; }
+        &.key_t{ left: @leftOffsetLine2 + 4 * @xDelta; }
+        &.key_y{ left: @leftOffsetLine2 + 5 * @xDelta; }
+        &.key_u{ left: @leftOffsetLine2 + 6 * @xDelta; }
+        &.key_i{ left: @leftOffsetLine2 + 7 * @xDelta; }
+        &.key_o{ left: @leftOffsetLine2 + 8 * @xDelta; }
+        &.key_p{ left: @leftOffsetLine2 + 9 * @xDelta; }
+
+        &.key_q{ left: @leftOffsetLine3;}
+        &.key_s{ left: @leftOffsetLine3 + 1 * @xDelta;}
+        &.key_d{ left: @leftOffsetLine3 + 2 * @xDelta; }
+        &.key_f{ left: @leftOffsetLine3 + 3 * @xDelta; }
+        &.key_g{ left: @leftOffsetLine3 + 4 * @xDelta; }
+        &.key_h{ left: @leftOffsetLine3 + 5 * @xDelta; }
+        &.key_j{ left: @leftOffsetLine3 + 6 * @xDelta; }
+        &.key_k{ left: @leftOffsetLine3 + 7 * @xDelta; }
+        &.key_l{ left: @leftOffsetLine3 + 8 * @xDelta; }
+        &.key_m{ left: @leftOffsetLine3 + 9  * @xDelta; }
+   
+        &.key_w{ left: @leftOffsetLine4;}
+        &.key_x{ left: @leftOffsetLine4 + 1 * @xDelta;}
+        &.key_c{ left: @leftOffsetLine4 + 2 * @xDelta; }
+        &.key_v{ left: @leftOffsetLine4 + 3 * @xDelta; }
+        &.key_b{ left: @leftOffsetLine4 + 4 * @xDelta; }
+        &.key_n{ left: @leftOffsetLine4 + 5 * @xDelta; }
+
+
+
+
+        &.current { background-color:@currentItemBlue; }
+        &.disabled { color:#AAA; }
+    }
+
+}
+
+
+//   /$$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$ /$$   /$$
+//  | $$__  $$ /$$__  $$| $$__  $$|_  $$_/| $$$ | $$
+//  | $$  \ $$| $$  \ $$| $$  \ $$  | $$  | $$$$| $$
+//  | $$$$$$$/| $$  | $$| $$$$$$$/  | $$  | $$ $$ $$
+//  | $$____/ | $$  | $$| $$____/   | $$  | $$  $$$$
+//  | $$      | $$  | $$| $$        | $$  | $$\  $$$
+//  | $$      |  $$$$$$/| $$       /$$$$$$| $$ \  $$
+//  |__/       \______/ |__/      |______/|__/  \__/
+#mask{
+  background-color: #000;
+  filter : alpha(opacity=70);
+  opacity : 0.7;
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+   z-index: 100;
+}
+#popin{
+
+   display: none;
+   position: fixed;
+   z-index: 100000;
+   top: 100px;
+   width: 600px;
+   left: 50%;
+   margin-left: -300px; /* Width / 2 */
+   background-color: #fff;
+   font-size: 1.2em;
+   overflow: hidden;
+   padding-bottom: 10px;
+   border:1px solid #555;
+   .boxshadow(1px, 1px, 8px, 1px, #767676);
+   //-webkit-box-shadow: 1px 1px 8px 1px #767676;
+   //-moz-box-shadow: 1px 1px 8px 1px #767676;
+   //box-shadow: 1px 1px 8px 1px #767676;
+   font-size:14px;
+
+   p { margin:25px; text-align: justify;font-size:1em;}
+   h2 { margin:25px; font-size:1.5em;}
+   a.crossPopin{ 
+    float:right; 
+    margin:5px 5px; 
+    }
+    a.okbutton { float:right; margin-right:10px; }
+}

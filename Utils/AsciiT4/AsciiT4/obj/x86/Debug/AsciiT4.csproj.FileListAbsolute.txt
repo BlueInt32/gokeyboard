@@ -1,0 +1,4 @@
+E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\Utils\AsciiT4\AsciiT4\bin\Debug\AsciiT4.exe
+E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\Utils\AsciiT4\AsciiT4\bin\Debug\AsciiT4.pdb
+E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\Utils\AsciiT4\AsciiT4\obj\x86\Debug\AsciiT4.exe
+E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\Utils\AsciiT4\AsciiT4\obj\x86\Debug\AsciiT4.pdb

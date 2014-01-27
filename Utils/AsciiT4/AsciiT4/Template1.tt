@@ -1,0 +1,92 @@
+﻿<#@ template  debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Security.Principal" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+//Generated Code Test  
+//Class: <#  
+string s = Path.GetFileName(this.Host.TemplateFile.Replace(".tt", ".cs"));  
+this.Write(s);   
+#>
+//Author:<#   
+this.Write(WindowsIdentity.GetCurrent().Name);  
+#> 
+//Date:<#= System.DateTime.Now #>. 
+
+using GoKeyboard.DTO;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WordListManager
+{
+    public class ProgramAsciiCreator
+    {
+        SortedList<int, GkKey> GkKeys { get; set; }
+        public ProgramAsciiCreator()
+        {
+            GkKeys = new SortedList<int, GkKey>
+            {
+<#
+int min = 32;
+int max = 127;
+for (int i = min; i < max; i++)
+{
+	char c = (char)i;
+	string display = string.Empty;
+	if (char.IsWhiteSpace(c))
+	{
+		display = c.ToString();
+		switch (c)
+		{
+			case '\t':
+			display = "\\t";
+			break;
+			case ' ':
+			display = "space";
+			break;
+			case '\n':
+			display = "\\n";
+			break;
+			case '\r':
+			display = "\\r";
+			break;
+			case '\v':
+			display = "\\v";
+			break;
+			case '\f':
+			display = "\\f";
+			break;
+		}
+	}
+	else if (char.IsControl(c))
+	{
+		display = "control";
+	}
+	else
+	{
+		display = c.ToString();
+	}
+	
+	#>
+	{ <#= i.ToString() #>, new GkKey { AsciiCode = <#= i.ToString() #>, Print="<#= c.ToString() #>", Token="<#= c.ToString() #>"  }  },
+	<#
+
+}
+#>
+
+            };
+
+        }
+
+
+    }
+}

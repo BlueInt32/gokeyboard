@@ -1,0 +1,8 @@
+﻿@model GoKeyboardRest.Api.Models.KeyboardHelperViewModel
+<div id="keyboardhelper">
+    @foreach (GoKeyboardRest.Api.Models.KeyboardHelperKeyViewModel keyModel in Model.KeyModels)
+    {
+        @Html.Partial("~/Views/Partials/KeyboardKey.cshtml", keyModel)
+    }
+
+</div>

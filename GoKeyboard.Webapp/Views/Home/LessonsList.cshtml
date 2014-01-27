@@ -1,0 +1,13 @@
+﻿@using GoKeyboard.DTO
+@model List<GkLesson>
+@{
+    ViewBag.Title = "Liste des leçons";
+}
+
+<h2>Liste de leçons</h2>
+<ul id="lessonsList">
+@foreach (GkLesson lesson in Model)
+{
+	<li><a class="button" data-num="@lesson.GkLessonId" href="@Url.Action("Lesson", new { id=@lesson.GkLessonId})">@lesson.Name</a></li>
+}
+</ul>

@@ -1,0 +1,13 @@
+﻿@using GoKeyboard.DTO
+@model List<GoKeyboard.DTO.GkChapter>
+@{
+    ViewBag.Title = "Liste des chapitres";
+}
+
+<h2>Liste de chapitres</h2>
+<ul>
+@foreach (GkChapter chapter in Model)
+{
+	<li><a href="@Url.Action("LessonsList", new { id = @chapter.Id })">@chapter.Name</a></li>
+}
+</ul>
