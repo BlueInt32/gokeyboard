@@ -1,20 +1,349 @@
 ﻿@import "mixin.less";
 
+//   /$$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$$
+//  | $$__  $$ /$$__  $$ /$$__  $$| $$_____/
+//  | $$  \ $$| $$  \ $$| $$  \__/| $$      
+//  | $$$$$$$ | $$$$$$$$|  $$$$$$ | $$$$$   
+//  | $$__  $$| $$__  $$ \____  $$| $$__/   
+//  | $$  \ $$| $$  | $$ /$$  \ $$| $$      
+//  | $$$$$$$/| $$  | $$|  $$$$$$/| $$$$$$$$
+//  |_______/ |__/  |__/ \______/ |________/
+html {
+    font-size: 100%; /* Voir -> Note 1 à la fin de la feuille de styles. */
+}
+body {
+    margin: 0;
+    padding: 10px 20px; /* Note -> 2 */
+    font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif; /* 3 */
+    font-size: .8em; /* -> 4 */
+    line-height: 1.25; /* -> 5 */
+    color: black;
+    background:url(images/hoffman.png);
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    margin: 1em 0 .5em 0; /* -> 6 */
+}
+h1, h2 {
+    font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+    font-weight: normal; /* -> 7 */
+}
+h1 {
+    font-size: 3em; /* -> 8 */
+    font-style: italic;
+}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1em;}
+
+/* Listes */
+ul, ol {
+    margin: .75em 0 .75em 24px;
+    padding: 0; /* -> 9 */
+}
+ul {
+    list-style: square;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Paragraphes */
+p {
+    margin: .75em 0;
+}
+li p, blockquote p {
+    margin: .5em 0;
+}
+
+/* Citations */
+blockquote, q {
+    font-size: 1.1em;
+    font-style: italic;
+    font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+}
+blockquote {
+    margin: .75em 0 .75em 24px;
+}
+cite {
+    font-style: italic;
+}
+
+/* Liens */
+a {
+    color: mediumblue;
+    text-decoration: underline;
+}
+a:hover, a:focus {
+    color: crimson;
+}
+a img {
+    border: none; /* -> 10 */
+}
+
+/* Divers éléments de type en-ligne */
+em {
+    font-style: italic;
+}
+strong {
+    font-weight: bold;
+    color: dimgray;
+}
 
 
-//    /$$$$$$   /$$$$$$  /$$      /$$ /$$      /$$  /$$$$$$  /$$   /$$
-//   /$$__  $$ /$$__  $$| $$$    /$$$| $$$    /$$$ /$$__  $$| $$$ | $$
-//  | $$  \__/| $$  \ $$| $$$$  /$$$$| $$$$  /$$$$| $$  \ $$| $$$$| $$
-//  | $$      | $$  | $$| $$ $$/$$ $$| $$ $$/$$ $$| $$  | $$| $$ $$ $$
-//  | $$      | $$  | $$| $$  $$$| $$| $$  $$$| $$| $$  | $$| $$  $$$$
-//  | $$    $$| $$  | $$| $$\  $ | $$| $$\  $ | $$| $$  | $$| $$\  $$$
-//  |  $$$$$$/|  $$$$$$/| $$ \/  | $$| $$ \/  | $$|  $$$$$$/| $$ \  $$
-//   \______/  \______/ |__/     |__/|__/     |__/ \______/ |__/  \__/
+/* --- STYLES POUR CERTAINS CONTENUS DES GABARITS --- */
+
+pre, code {
+    font-size: 100%;
+    font-family: "Bitstream Vera Mono", "Lucida Console", "Courier New", monospace;
+}
+pre {
+    width: 90%;
+    overflow: auto;
+    overflow-y: hidden;
+    margin: .75em 0;
+    padding: 12px;
+    background: #eee;
+    color: #555;
+}
+pre strong {
+    font-weight: normal;
+    color: black;
+}
+#copyright {
+    margin: 20px 0 5px 0;
+    text-align: right;
+    font-size: .8em;
+    color: #848F63;
+}
+#copyright a {
+    color: #848F63;
+    text-decoration: none;
+}
+#copyright a:hover, #copyright a:focus {
+    text-decoration: underline;
+}
+
+
+/* --- NOTES ---
+
+1.  Ce "font-size: 100%" est normalement inutile. On l'utilise uniquement
+    pour éviter un bug de redimensionnement du texte dans Internet Explorer.
+
+2.  Par défaut, les navigateurs ont un padding (ou, pour certains, un
+    margin) de 6px pour l'élément BODY. C'est ce qui évite que le texte
+    ne soit complètement collé aux bords de la zone de visualisation du
+    navigateur lorsqu'on affiche une page «brute», sans mise en forme.
+    Mais ce retrait de 6px est un peu faiblard: on le renforce donc.
+    Notez bien que les feuilles de styles des gabarits pourront augmenter
+    ce retrait, ou bien l'annuler.
+    
+3.  Voici quelques exemples de collections cohérentes de fontes (propriété
+    CSS "font-family"):
+    font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+    font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif;
+        
+4.  Taille du texte de base de la page. Dépend de la taille du texte par
+    défaut du navigateur (souvent 16px), et des réglages de l'utilisateur.
+    À adapter en fonction de la fonte choisie, et du rendu souhaité.
+    En général, on utilisera une valeur de base entre .65em et 1em
+    (ou 65% et 100%).
+
+5.  Hauteur de ligne. À adapter en fonction de la fonte choisie, et des
+    besoins particuliers (lignes de texte longues ou courtes, titre ou
+    corps de texte...).
+
+6.  En général, les styles par défaut des navigateurs font que les marges
+    en haut et en bas des titres sont équivalentes. Ici, en diminuant la
+    marge du bas, on cherche à rapprocher le titre du contenu qu'il introduit.
+
+7.  Les styles par défaut des navigateurs mettent les titres en gras.
+    Si on souhaite passer à des caractères «normaux», on doit utiliser
+    font-size: normal.
+
+8.  Pour un élément en "font-size: 3em", la taille du texte sera le triple de
+    la taille du texte de l'élément parent.
+    À noter: on aurait pu écrire "font-size: 300%" pour le même résultat.
+
+9.  Par défaut, les listes UL et OL ont un retrait à gauche qui peut être,
+    suivant les navigateurs:
+    - un padding-left de 40px;
+    - ou bien un margin-left de 40px.
+    On met tout le monde d'accord avec une marge à gauche de 24px, et pas
+    de padding.
+
+10. Les navigateurs donnent souvent aux images placées dans des liens
+    une bordure disgracieuse. On annule ce style souvent gênant en appliquant
+    un "border: none" aux images qui se trouvent à l'intérieur d'un lien.
+
+*/
+//    /$$$$$$   /$$$$$$  /$$$$$$$ 
+//   /$$__  $$ /$$__  $$| $$__  $$
+//  | $$  \__/| $$  \ $$| $$  \ $$
+//  | $$ /$$$$| $$$$$$$$| $$$$$$$ 
+//  | $$|_  $$| $$__  $$| $$__  $$
+//  | $$  \ $$| $$  | $$| $$  \ $$
+//  |  $$$$$$/| $$  | $$| $$$$$$$/
+//   \______/ |__/  |__/|_______/ 
+/* Général */
+body {
+    color: @globalColor;
+    background: #2C2F22;
+}
+a {
+    color: #FF6533;
+}
+a:hover, a:focus {
+    color: #FF4C00;
+}
+strong {
+    color: #A1B55D;
+}
+
+/* Global */
+#global {
+    border-right: 20px solid @contentBgColor; /* Voir -> Note 1 ci-dessous */
+    color: @globalColor;
+    background: @white url(./images/06-gauche.png) repeat-y left top; /* -> 1 */
+}
+
+/* En-tête */
+#entete {
+    background: @contentBgColor;
+}
+
+/* Navigation */
+#navigation {
+    background: @contentBgColor;
+}
+#navigation a {
+    color: @currentItemBlue;
+}
+#navigation a:hover, #navigation a:focus {
+    background: @currentItemBlue;
+    .borderradius();
+    color:@white;
+}
+
+/* Contenu principal */
+#contenu {
+    color: @contentTextColor;
+    background: url(./images/06-coin.png) no-repeat left top;
+}
+#contenu a {
+    color: @linkColor;
+}
+#contenu a::after {
+    content: " »";
+}
+#contenu a:hover, #contenu a:focus {
+    color: @linkHoverColor;
+}
+#contenu strong {
+    color: @contentBgColor;
+}
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+body {
+    padding: 30px 10px 0 10px;
+}
+#global {
+    width: 90%;
+    overflow: hidden; /* -> 2 */
+    min-width: 700px;
+    max-width: 1000px; /* -> 3 */
+    margin-left: auto;
+    margin-right: auto; /* -> 4 */
+}
+
+/* En-tête */
+#entete {
+    padding: 20px;
+}
+#entete h1 {
+    margin: 0;
+}
+#entete h1 img {
+    float: left;
+    margin: 7px 20px 10px 0;
+}
+#entete .sous-titre {
+    margin: 4px 0 15px 0;
+}
+
+/* Menu de navigation */
+#navigation {
+    width: 180px;
+    float: left; /* -> 5 */
+}
+#navigation ul {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+}
+#navigation a {
+    display: block;
+    height: 1%; /* -> 6 */
+    padding: 6px 6px 6px 10px;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+/* Contenu */
+#contenu {
+    margin-left: 220px; /* -> 7 */
+    padding: 10px 20px 10px 40px;
+}
+#contenu > :first-child {
+    margin-top: 10px;
+}
+#contenu p, #contenu li {
+    line-height: 1.5;
+}
+
+/* Mention de copyright */
+#copyright {
+    width: 180px;
+    margin: 0;
+    padding: 0 0 10px 20px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   /$$      /$$ /$$$$$$ /$$   /$$ /$$$$$$$$
+//  | $$$    /$$$|_  $$_/| $$$ | $$| $$_____/
+//  | $$$$  /$$$$  | $$  | $$$$| $$| $$      
+//  | $$ $$/$$ $$  | $$  | $$ $$ $$| $$$$$   
+//  | $$  $$$| $$  | $$  | $$  $$$$| $$__/   
+//  | $$\  $ | $$  | $$  | $$\  $$$| $$      
+//  | $$ \/  | $$ /$$$$$$| $$ \  $$| $$$$$$$$
+//  |__/     |__/|______/|__/  \__/|________/
+
 body 
 {
     padding-top: 50px;
     padding-bottom: 20px;
-    background:url(images/hoffman.png) !important;
+    background:url(images/hoffman.png);
     .body-content 
     {
         padding-left: 15px;
@@ -48,64 +377,6 @@ input[type="checkbox"].input-validation-error {
 
 .validation-summary-valid {
     display: none;
-}
-
-/*BUTTONS*/
-
-
-.button {
-    background-color:#3bb3e0;
-    font-family: 'Open Sans', sans-serif;
-    font-size:33px;
-    text-decoration:none;
-    color:#fff;
-    position:relative;
-    padding: 0px 5px;
-    border-left:solid 1px #2ab7ec;
-    margin-left:35px;
-    background-image: linear-gradient(to bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #156785,0px 7px 2px #102A33;
-    width: 94px;
-    display: block;
-    height: 74px;
-    line-height: 74px;
-}
- 
-.button:active {
-    top:3px;
-    background-image: linear-gradient(to bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
-    box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #156785,0px 4px 2px #102A33;
-}
-.button:hover {
-    text-decoration: none;
-}
-
-.button::before {
-    content: attr(data-num);
-    width:35px;
-    height:100%;
-    position:absolute;
-    display:block;
-    padding-top:0px;
-    top:0px;
-    left:-36px;
-    font-size:16px;
-    font-weight:bold;
-    color:#8fd1ea;
-    text-shadow:1px 1px 0px #07526e;
-    border-right:solid 1px #07526e;
-    background-image: linear-gradient(to bottom, rgb(10,94,125) 0%, rgb(14,139,184) 100%);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a,0px 7px 2px #102A33;
-    line-height: 74px;
-}
- 
-.button:active::before {
-    top:-3px;
-    box-shadow:inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #032b3a, 1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64, 6px 4px 2px #0b698b,0px 7px 2px #102A33;
 }
 
 footer 
@@ -147,15 +418,22 @@ footer
         {
             //background: #75a4bf;
             font-family: "Lucida Console";
-            line-height: 65px;
-            margin: -6px;
-            padding: 5px;
+            line-height: 40px;
+            margin: 13px -9px 0 0;
+            padding: 0 2px 0 2px;
+            //padding: 5px;
             transition: background 0.15s;
+            //width: 29px;
+            display: inline-block;
             .borderradius;
             &.activeItem
             {
                 background: @currentItemBlue;
+                //border-left: 4px solid @currentItemBlue;
                 transition: background 0.15s;
+                //width: 25px;
+                //padding-left:0px;
+                //.boxshadow( 4px; 0; 0; 0;  #F00; inset);
             }
             &.error
             {
@@ -218,21 +496,21 @@ ul#lessonsList
     font-size:0.6em;
     position:relative; 
     height: 216px;
-    background: #CCC;
-    width: 490px;
+    width: 620px;
     .borderradius(5px);
-    .boxshadow(-1px, -1px, 1px, 2px, #666, inset);
 
     div
     {
+        color:#000;
         position:absolute;
         width: 38px;
         height: 38px;
         line-height: 38px;
         .borderradius(5px);
-        .boxshadow(-1px, -1px, 1px, 2px, #777, inset);
-        background-color:#CCC;
+        border: 1px solid #ccc;
+        
         text-align: center;
+        font-family: "Lucida Console";
 
         @baseLeftOffset: 10px;
         @baseTopOffset: 10px;
@@ -246,29 +524,30 @@ ul#lessonsList
         @topOffsetLine4: 3 * @yDelta + @baseTopOffset;
         @topOffsetLine5: 4 * @yDelta + @baseTopOffset;
 
-        @leftOffsetLine1: 30px + @baseLeftOffset;
-        @leftOffsetLine2: 0px + @baseLeftOffset;
-        @leftOffsetLine3: 20px + @baseLeftOffset;
-        @leftOffsetLine4: 40px + @baseLeftOffset;
-        @leftOffsetLine5: 105px + @baseLeftOffset;
+        @leftOffsetLine1: 0px + @baseLeftOffset;
+        @leftOffsetLine2: 10px + @baseLeftOffset;
+        @leftOffsetLine3: 30px + @baseLeftOffset;
+        @leftOffsetLine4: 10px + @baseLeftOffset;
+        @leftOffsetLine5: 115px + @baseLeftOffset;
 
         &.row1 { top:@topOffsetLine1; }
         &.row2{ top:@topOffsetLine2; }
         &.row3{ top:@topOffsetLine3; }
         &.row4{ top:@topOffsetLine4; }
-        &.key_spacebar { top:@topOffsetLine5; left:@leftOffsetLine5; width:320px; } 
+        &.key_space { top:@topOffsetLine5; left:@leftOffsetLine5; width:320px; } 
 
-        &.key_eacute    { left: @leftOffsetLine1;}
-        &.key_quot      { left: @leftOffsetLine1 +  1 * @xDelta;} 
-        &.key_apos      { left: @leftOffsetLine1 +  2 * @xDelta;}
-        &.key_lpar      { left: @leftOffsetLine1 +  3 * @xDelta;}
-        &.key_minus     { left: @leftOffsetLine1 +  4 * @xDelta;}
-        &.key_eagrave   { left: @leftOffsetLine1 + 5 * @xDelta;}
-        &.key_underscore{ left: @leftOffsetLine1 + 6 * @xDelta;}
-        &.key_ccedil    { left: @leftOffsetLine1 +  7 * @xDelta;}
-        &.key_agrave    { left: @leftOffsetLine1 +  8 * @xDelta;}
-        &.key_rpar      { left: @leftOffsetLine1 +  9 * @xDelta;}
-        &.key_equals    { left: @leftOffsetLine1 +  10 * @xDelta;}
+        &.key_esp    { left: @leftOffsetLine1;}
+        &.key_eacute    { left: @leftOffsetLine1 +  1 * @xDelta;}
+        &.key_dquote        { left: @leftOffsetLine1 +  2 * @xDelta;}
+        &.key_quote     { left: @leftOffsetLine1 +  3 * @xDelta;}
+        &.key_parleft      { left: @leftOffsetLine1 +  4 * @xDelta;}
+        &.key_minus     { left: @leftOffsetLine1 + 5 * @xDelta;}
+        &.key_egrave   { left: @leftOffsetLine1 + 6 * @xDelta;}
+        &.key_underscore{ left: @leftOffsetLine1 +  7 * @xDelta;}
+        &.key_ccedil    { left: @leftOffsetLine1 +  8 * @xDelta;}
+        &.key_agrave     { left: @leftOffsetLine1 +  9 * @xDelta;}
+        &.key_parright     { left: @leftOffsetLine1 +  10 * @xDelta;}
+        &.key_equal    { left: @leftOffsetLine1 +  11 * @xDelta;}
 
         &.key_a{ left: @leftOffsetLine2 }
         &.key_z{ left: @leftOffsetLine2 + 1 * @xDelta;}
@@ -280,6 +559,8 @@ ul#lessonsList
         &.key_i{ left: @leftOffsetLine2 + 7 * @xDelta; }
         &.key_o{ left: @leftOffsetLine2 + 8 * @xDelta; }
         &.key_p{ left: @leftOffsetLine2 + 9 * @xDelta; }
+        &.key_circ{ left: @leftOffsetLine2 + 10 * @xDelta; }
+        &.key_dollar{ left: @leftOffsetLine2 + 11 * @xDelta; }
 
         &.key_q{ left: @leftOffsetLine3;}
         &.key_s{ left: @leftOffsetLine3 + 1 * @xDelta;}
@@ -291,19 +572,26 @@ ul#lessonsList
         &.key_k{ left: @leftOffsetLine3 + 7 * @xDelta; }
         &.key_l{ left: @leftOffsetLine3 + 8 * @xDelta; }
         &.key_m{ left: @leftOffsetLine3 + 9  * @xDelta; }
+        &.key_ugrave{ left: @leftOffsetLine3 + 10  * @xDelta; }
+        &.key_star{ left: @leftOffsetLine3 + 11  * @xDelta; }
    
-        &.key_w{ left: @leftOffsetLine4;}
-        &.key_x{ left: @leftOffsetLine4 + 1 * @xDelta;}
-        &.key_c{ left: @leftOffsetLine4 + 2 * @xDelta; }
-        &.key_v{ left: @leftOffsetLine4 + 3 * @xDelta; }
-        &.key_b{ left: @leftOffsetLine4 + 4 * @xDelta; }
-        &.key_n{ left: @leftOffsetLine4 + 5 * @xDelta; }
+        &.key_lt         { left: @leftOffsetLine4;}
+        &.key_w         { left: @leftOffsetLine4 + 1 * @xDelta;}
+        &.key_x         { left: @leftOffsetLine4 + 2 * @xDelta;}
+        &.key_c         { left: @leftOffsetLine4 + 3 * @xDelta;}
+        &.key_v         { left: @leftOffsetLine4 + 4 * @xDelta;}
+        &.key_b         { left: @leftOffsetLine4 + 5 * @xDelta}
+        &.key_n         { left: @leftOffsetLine4 + 6 * @xDelta;}
+        &.key_coma      { left: @leftOffsetLine4 + 7 * @xDelta;}
+        &.key_semicolon { left: @leftOffsetLine4 + 8 * @xDelta;}
+        &.key_colon     { left: @leftOffsetLine4 + 9 * @xDelta;}
+        &.key_exclam    { left: @leftOffsetLine4 + 10 * @xDelta;}
 
 
 
 
         &.current { background-color:@currentItemBlue; }
-        &.disabled { color:#AAA; }
+        &.disabled { color:#AAA;}
     }
 
 }

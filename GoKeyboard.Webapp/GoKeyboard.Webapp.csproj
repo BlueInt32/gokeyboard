@@ -169,12 +169,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\hoffman.png" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Sounds\new\tic.wav" />
     <Content Include="Scripts\jquery.flot.categories.js" />
     <Content Include="Scripts\jquery.flot.js" />
     <Content Include="Scripts\jquery.knob.js" />
@@ -263,7 +260,6 @@
     <Content Include="Views\Shared\CharViewPartial.cshtml" />
     <Content Include="Views\Home\ChaptersList.cshtml" />
     <Content Include="Views\Home\Stats.cshtml" />
-    <Content Include="Views\Yo\Index.cshtml" />
     <Content Include="Views\Partials\KeyboardHelper.cshtml" />
     <Content Include="Views\Partials\KeyboardKey.cshtml" />
     <Content Include="Views\Home\Conseils.cshtml" />
@@ -274,6 +270,10 @@
       <Project>{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}</Project>
       <Name>Tools</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GoKeyboard.Business\GoKeyboard.Business.csproj">
+      <Project>{6674cb0c-b807-4803-a2a5-5572d68eef70}</Project>
+      <Name>GoKeyboard.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoKeyboard.DAL\GoKeyboard.DAL.csproj">
       <Project>{4A779E53-621B-4A26-961D-2C76AF31FDBD}</Project>
       <Name>GoKeyboard.DAL</Name>
@@ -281,10 +281,6 @@
     <ProjectReference Include="..\GoKeyboard.DTO\GoKeyboard.DTO.csproj">
       <Project>{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}</Project>
       <Name>GoKeyboard.DTO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GoKeyboard.LessonFactory\GoKeyboard.LessonFactory.csproj">
-      <Project>{AE8E9861-15CD-4E88-B326-C5BE33CAA483}</Project>
-      <Name>GoKeyboard.LessonFactory</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

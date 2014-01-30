@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,11 @@ namespace GoKeyboard.DTO
         public bool AltGred { get; set; }
         public ICollection<GkFinger> Fingers { get; set; }
 
-        public ICollection<GkLesson> Lessons { get; set; }
+        [InverseProperty("WorkedChars")]
+        public ICollection<GkLesson> LessonsFocus { get; set; }
+
+        [InverseProperty("KnownChars")]
+        public ICollection<GkLesson> LessonsWith { get; set; }
 
 
 

@@ -55,7 +55,9 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="DataInitializer.cs" />
+    <Compile Include="GkKeysDal.cs" />
     <Compile Include="GkLessonDal.cs" />
+    <Compile Include="StaticDataFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GkUserDal.cs" />
   </ItemGroup>

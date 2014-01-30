@@ -18,10 +18,14 @@ namespace GoKeyboard.DTO
 
         public List<GkLessonPage> LessonPages { get; set; }
 
-        public string WorkedChars { get; set; }
-        public string KnownChars { get; set; }
 
 		public int ChapterId { get; set; }
+
+        [InverseProperty("LessonsFocus")]
+        public ICollection<GkKey> WorkedChars { get; set; }
+
+        [InverseProperty("LessonsWith")]
+        public ICollection<GkKey> KnownChars { get; set; }
         public virtual GkChapter Chapter { get; set; }
         
         [NotMapped]

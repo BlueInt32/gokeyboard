@@ -15,6 +15,6 @@ namespace GoKeyboard.DTO
         public string Name { get; set; }
 
         //public string Keys { get; set; }
-        public List<GkKey> Keys { get; set; }
+        public virtual ICollection<GkKey> Keys { get; set; }
     }
 }

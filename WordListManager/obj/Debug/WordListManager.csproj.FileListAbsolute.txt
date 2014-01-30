@@ -26,3 +26,5 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\WordListManager\obj\Debug\W
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\WordListManager\obj\Debug\WordListManager.pdb
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\WordListManager\bin\Debug\GoKeyboard.DTO.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\WordListManager\bin\Debug\GoKeyboard.DTO.pdb
+D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\WordListManager\bin\Debug\GoKeyboard.DTO.dll
+D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\WordListManager\bin\Debug\GoKeyboard.DTO.pdb

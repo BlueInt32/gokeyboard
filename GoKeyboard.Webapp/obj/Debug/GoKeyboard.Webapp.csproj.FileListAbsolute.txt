@@ -7,7 +7,6 @@ D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.dll
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.SqlServer.dll
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DAL.dll
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DTO.dll
-D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.LessonFactory.dll
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\log4net.dll
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Microsoft.Web.Infrastructure.dll
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Newtonsoft.Json.dll
@@ -30,7 +29,6 @@ D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\WordListManager.exe
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Tools.pdb
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DAL.pdb
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DTO.pdb
-D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.LessonFactory.pdb
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.xml
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.SqlServer.xml
 D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\log4net.xml
@@ -59,7 +57,6 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Entit
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.SqlServer.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DAL.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DTO.dll
-E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.LessonFactory.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\log4net.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Microsoft.Web.Infrastructure.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Newtonsoft.Json.dll
@@ -82,7 +79,6 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\WordL
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\Tools.pdb
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DAL.pdb
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.DTO.pdb
-E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.LessonFactory.pdb
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.xml
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\EntityFramework.SqlServer.xml
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\log4net.xml
@@ -102,3 +98,7 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\WordL
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\obj\Debug\GoKeyboard.Webapp.csprojResolveAssemblyReference.cache
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\obj\Debug\GoKeyboardRest.Api.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\obj\Debug\GoKeyboardRest.Api.pdb
+E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.Business.dll
+E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.Business.pdb
+D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.Business.dll
+D:\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.Webapp\bin\GoKeyboard.Business.pdb
