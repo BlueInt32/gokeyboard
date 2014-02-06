@@ -10,3 +10,9 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DTO\bin\Debug\Go
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DTO\obj\Debug\GoKeyboard.DTO.csprojResolveAssemblyReference.cache
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DTO\obj\Debug\GoKeyboard.DTO.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DTO\obj\Debug\GoKeyboard.DTO.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.DTO\bin\Debug\GoKeyboard.DTO.dll.config
+E:\Simon\Git\GoKeyboard\GoKeyboard.DTO\bin\Debug\GoKeyboard.DTO.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.DTO\bin\Debug\GoKeyboard.DTO.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.DTO\obj\Debug\GoKeyboard.DTO.csprojResolveAssemblyReference.cache
+E:\Simon\Git\GoKeyboard\GoKeyboard.DTO\obj\Debug\GoKeyboard.DTO.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.DTO\obj\Debug\GoKeyboard.DTO.pdb

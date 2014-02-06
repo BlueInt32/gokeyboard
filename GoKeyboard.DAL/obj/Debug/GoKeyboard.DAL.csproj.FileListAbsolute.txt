@@ -34,3 +34,6 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DAL\bin\Debug\fr
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DAL\obj\Debug\GoKeyboard.DAL.csprojResolveAssemblyReference.cache
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DAL\obj\Debug\GoKeyboard.DAL.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.DAL\obj\Debug\GoKeyboard.DAL.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.DAL\obj\Debug\GoKeyboard.DAL.csprojResolveAssemblyReference.cache
+E:\Simon\Git\GoKeyboard\GoKeyboard.DAL\obj\Debug\GoKeyboard.DAL.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.DAL\obj\Debug\GoKeyboard.DAL.pdb

@@ -34,3 +34,23 @@ E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.LessonFactory\bi
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.LessonFactory\obj\Debug\GoKeyboard.LessonFactory.csprojResolveAssemblyReference.cache
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.LessonFactory\obj\Debug\GoKeyboard.LessonFactory.dll
 E:\Simon\Dropbox\Dropbox\Prog\ASP.NET MVC\GoKeyboard\GoKeyboard.LessonFactory\obj\Debug\GoKeyboard.LessonFactory.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\GoKeyboard.LessonFactory.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\GoKeyboard.LessonFactory.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\GoKeyboard.DAL.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\GoKeyboard.DTO.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\Tools.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\WordListManager.exe
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\System.Web.Mvc.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\EntityFramework.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\log4net.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\Tools.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\GoKeyboard.DAL.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\GoKeyboard.DTO.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\WordListManager.pdb
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\EntityFramework.xml
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\log4net.xml
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\bin\Debug\fr\System.Web.Mvc.resources.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\obj\Debug\GoKeyboard.LessonFactory.csprojResolveAssemblyReference.cache
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\obj\Debug\GoKeyboard.LessonFactory.dll
+E:\Simon\Git\GoKeyboard\GoKeyboard.LessonFactory\obj\Debug\GoKeyboard.LessonFactory.pdb
