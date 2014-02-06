@@ -74,7 +74,7 @@
         self.activeItem = self.activeItem.nextAll("span").first();
         self.globalCharIndex = self.activeItem.attr("data-index");
 
-        //soundManager.PlayRandomSoundStartingWith("n");
+    	self.soundManager.Play("kk");
         if (self.activeItem.length == 0)
         {
             // change page !

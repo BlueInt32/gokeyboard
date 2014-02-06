@@ -21,7 +21,7 @@ namespace GoKeyboard.DAL
         {
             using (DataContext context = new DataContext())
             {
-                GkLesson lessonFromDb = context.GkLessons.FirstOrDefault(u => u.GkLessonId == id);
+                GkLesson lessonFromDb = context.GkLessons.Include(c => c.WorkedChars).Include(c => c.KnownChars).FirstOrDefault(u => u.GkLessonId == id);
                 if (lessonFromDb == null)
                     return OperationResult<GkLesson>.BadResult("GkLesson introuvable");
                 return OperationResult<GkLesson>.OkResultInstance(lessonFromDb);

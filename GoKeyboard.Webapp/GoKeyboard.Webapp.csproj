@@ -53,9 +53,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -143,20 +143,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
-    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
-    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
-    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
-    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
-    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
-    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
-    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -168,13 +154,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\hoffman.png" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\images\logo.jpg" />
+    <Content Include="Content\Sounds\new\tic.wav" />
     <Content Include="Scripts\jquery.flot.categories.js" />
     <Content Include="Scripts\jquery.flot.js" />
     <Content Include="Scripts\jquery.knob.js" />
@@ -218,17 +201,6 @@
     <Content Include="GoKeyboard.html" />
     <Content Include="Scripts\backbone-min.js" />
     <Content Include="Scripts\backbone.localStorage.js" />
-    <Content Include="Areas\HelpPage\Views\Web.config" />
-    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
-    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\Ovh-maison.pubxml" />
     <None Include="Properties\PublishProfiles\Ovh.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -250,7 +222,6 @@
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
@@ -263,7 +234,6 @@
     <Content Include="Views\Shared\CharViewPartial.cshtml" />
     <Content Include="Views\Home\ChaptersList.cshtml" />
     <Content Include="Views\Home\Stats.cshtml" />
-    <Content Include="Views\Yo\Index.cshtml" />
     <Content Include="Views\Partials\KeyboardHelper.cshtml" />
     <Content Include="Views\Partials\KeyboardKey.cshtml" />
     <Content Include="Views\Home\Conseils.cshtml" />
@@ -274,6 +244,10 @@
       <Project>{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}</Project>
       <Name>Tools</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GoKeyboard.Business\GoKeyboard.Business.csproj">
+      <Project>{6674cb0c-b807-4803-a2a5-5572d68eef70}</Project>
+      <Name>GoKeyboard.Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoKeyboard.DAL\GoKeyboard.DAL.csproj">
       <Project>{4A779E53-621B-4A26-961D-2C76AF31FDBD}</Project>
       <Name>GoKeyboard.DAL</Name>
@@ -281,10 +255,6 @@
     <ProjectReference Include="..\GoKeyboard.DTO\GoKeyboard.DTO.csproj">
       <Project>{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}</Project>
       <Name>GoKeyboard.DTO</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GoKeyboard.LessonFactory\GoKeyboard.LessonFactory.csproj">
-      <Project>{AE8E9861-15CD-4E88-B326-C5BE33CAA483}</Project>
-      <Name>GoKeyboard.LessonFactory</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

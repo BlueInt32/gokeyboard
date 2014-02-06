@@ -1,5 +1,5 @@
-﻿@using GoKeyboard.DTO
-@using Tools.Utils
+﻿@using GoKeyboard.DTO   
+@using GoKeyboardRest.Api.Models
 @model GoKeyboard.DTO.GkLesson
 @{
     ViewBag.Title = "Index";
@@ -19,17 +19,16 @@
             {
                 pageIndex++;
                 <div class="page">
-                    @*<h3>Page @pageIndex</h3>*@
                     @foreach (char item in lessonPage.Text)
                     {
-                        @Html.Partial("CharViewPartial", new GoKeyboardRest.Api.Models.LessonItemCharViewModel { Char = item, Index = charIndex })
+                        @Html.Partial("CharViewPartial", new LessonItemCharViewModel { Char = item, Index = charIndex })
                         charIndex++;
                     }
                 </div>
             }
             <div class="row">
                 <div class="col-md-2">
-                    <div class="col-md-8">@Html.Partial("~/Views/Partials/KeyboardHelper.cshtml", new GoKeyboardRest.Api.Models.KeyboardHelperViewModel(Model))</div>
+                    <div class="col-md-8">@Html.Partial("~/Views/Partials/KeyboardHelper.cshtml", new KeyboardHelperViewModel(Model))</div>
                     <div class="col-md-2"></div>
 
                 </div>
@@ -59,15 +58,9 @@
         <script>
             var sounds =
             {
-                @*"n1":'@Url.Content("~/Content/Sounds/new/s (1).mp3")',
-		"n2":'@Url.Content("~/Content/Sounds/new/s (2).mp3")',
-		"n3":'@Url.Content("~/Content/Sounds/new/s (3).mp3")',
-		"n4":'@Url.Content("~/Content/Sounds/new/s (4).mp3")',
-		"n5":'@Url.Content("~/Content/Sounds/new/s (5).mp3")',
-		"n6":'@Url.Content("~/Content/Sounds/new/s (6).mp3")',
-		"n7": '@Url.Content("~/Content/Sounds/new/s (7).mp3")',*@
                 "win": '@Url.Content("~/Content/Sounds/new/win.mp3")',
-                "miss": '@Url.Content("~/Content/Sounds/new/miss.mp3")'
+            	"miss": '@Url.Content("~/Content/Sounds/new/miss.mp3")',
+            	"kk" : '@Url.Content("~/Content/Sounds/new/tic.wav")',
             };
 
             $(function ()
