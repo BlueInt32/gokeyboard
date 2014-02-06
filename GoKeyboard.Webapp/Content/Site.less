@@ -4,30 +4,31 @@
 //  | $$__  $$ /$$__  $$ /$$__  $$| $$_____/
 //  | $$  \ $$| $$  \ $$| $$  \__/| $$      
 //  | $$$$$$$ | $$$$$$$$|  $$$$$$ | $$$$$   
-//  | $$__  $$| $$__  $$ \____  $$| $$__/   
+//  | $$__  $$| $$__  $$ \____  $$| $$__/    
 //  | $$  \ $$| $$  | $$ /$$  \ $$| $$      
 //  | $$$$$$$/| $$  | $$|  $$$$$$/| $$$$$$$$
 //  |_______/ |__/  |__/ \______/ |________/
 html {
-    font-size: 100%; /* Voir -> Note 1 à la fin de la feuille de styles. */
+    font-size: 100%;
 }
 body {
     margin: 0;
-    padding: 10px 20px; /* Note -> 2 */
-    font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif; /* 3 */
-    font-size: .8em; /* -> 4 */
-    line-height: 1.25; /* -> 5 */
-    color: black;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: .8em;
+    line-height: 1.25;
+    padding-bottom: 20px;
     background:url(images/hoffman.png);
+    input, select, textarea 
+    {
+        max-width: 280px;
+    }
+    color: @globalColor;
+    border-top: 4px solid @globalColor;
 }
 
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .5em 0; /* -> 6 */
-}
-h1, h2 {
-    font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
-    font-weight: normal; /* -> 7 */
 }
 h1 {
     font-size: 3em; /* -> 8 */
@@ -126,61 +127,6 @@ pre strong {
     text-decoration: underline;
 }
 
-
-/* --- NOTES ---
-
-1.  Ce "font-size: 100%" est normalement inutile. On l'utilise uniquement
-    pour éviter un bug de redimensionnement du texte dans Internet Explorer.
-
-2.  Par défaut, les navigateurs ont un padding (ou, pour certains, un
-    margin) de 6px pour l'élément BODY. C'est ce qui évite que le texte
-    ne soit complètement collé aux bords de la zone de visualisation du
-    navigateur lorsqu'on affiche une page «brute», sans mise en forme.
-    Mais ce retrait de 6px est un peu faiblard: on le renforce donc.
-    Notez bien que les feuilles de styles des gabarits pourront augmenter
-    ce retrait, ou bien l'annuler.
-    
-3.  Voici quelques exemples de collections cohérentes de fontes (propriété
-    CSS "font-family"):
-    font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
-    font-family: "Times New Roman", Times, "Nimbus Roman No9 L", serif;
-        
-4.  Taille du texte de base de la page. Dépend de la taille du texte par
-    défaut du navigateur (souvent 16px), et des réglages de l'utilisateur.
-    À adapter en fonction de la fonte choisie, et du rendu souhaité.
-    En général, on utilisera une valeur de base entre .65em et 1em
-    (ou 65% et 100%).
-
-5.  Hauteur de ligne. À adapter en fonction de la fonte choisie, et des
-    besoins particuliers (lignes de texte longues ou courtes, titre ou
-    corps de texte...).
-
-6.  En général, les styles par défaut des navigateurs font que les marges
-    en haut et en bas des titres sont équivalentes. Ici, en diminuant la
-    marge du bas, on cherche à rapprocher le titre du contenu qu'il introduit.
-
-7.  Les styles par défaut des navigateurs mettent les titres en gras.
-    Si on souhaite passer à des caractères «normaux», on doit utiliser
-    font-size: normal.
-
-8.  Pour un élément en "font-size: 3em", la taille du texte sera le triple de
-    la taille du texte de l'élément parent.
-    À noter: on aurait pu écrire "font-size: 300%" pour le même résultat.
-
-9.  Par défaut, les listes UL et OL ont un retrait à gauche qui peut être,
-    suivant les navigateurs:
-    - un padding-left de 40px;
-    - ou bien un margin-left de 40px.
-    On met tout le monde d'accord avec une marge à gauche de 24px, et pas
-    de padding.
-
-10. Les navigateurs donnent souvent aux images placées dans des liens
-    une bordure disgracieuse. On annule ce style souvent gênant en appliquant
-    un "border: none" aux images qui se trouvent à l'intérieur d'un lien.
-
-*/
 //    /$$$$$$   /$$$$$$  /$$$$$$$ 
 //   /$$__  $$ /$$__  $$| $$__  $$
 //  | $$  \__/| $$  \ $$| $$  \ $$
@@ -189,44 +135,57 @@ pre strong {
 //  | $$  \ $$| $$  | $$| $$  \ $$
 //  |  $$$$$$/| $$  | $$| $$$$$$$/
 //   \______/ |__/  |__/|_______/ 
-/* Général */
-body {
-    color: @globalColor;
-    background: #2C2F22;
-}
-a {
-    color: #FF6533;
-}
-a:hover, a:focus {
-    color: #FF4C00;
-}
-strong {
-    color: #A1B55D;
-}
+#header 
+{
+    #sub-header 
+    {
+        height: 80px;
+        min-width: 700px;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        border-bottom: solid 1px #EAEAEA;
+        background: @contentBgColor;
+        
+        #logo
+        {
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            background: url(./images/logo_80.png) @globalColor no-repeat;
+            float:left;
+        }
+        nav 
+        {
+            margin: 0 0 0 20px;
+            float:left;
+            a 
+            {
+                font-size: 14px;
+                float:left;
+                display:block;
+                height: 80px;
+                line-height: 80px;
+                margin: 0 0 0 0;
+                padding: 0 15px;
+                color: @navLinkColor;
+                border-right: solid 1px #EAEAEA;
+                text-decoration: none;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                &:hover
+                {
+                    color:@navLinkColorHover;
 
-/* Global */
+                }
+            }
+        }
+    }
+    
+}
 #global {
-    border-right: 20px solid @contentBgColor; /* Voir -> Note 1 ci-dessous */
     color: @globalColor;
-    background: @white url(./images/06-gauche.png) repeat-y left top; /* -> 1 */
-}
+    background: @white;
 
-/* En-tête */
-#entete {
-    background: @contentBgColor;
-}
-
-/* Navigation */
-#navigation {
-    background: @contentBgColor;
-}
-#navigation a {
-    color: @currentItemBlue;
-}
-#navigation a:hover, #navigation a:focus {
-    background: @currentItemBlue;
-    .borderradius();
-    color:@white;
 }
 
 /* Contenu principal */
@@ -251,9 +210,6 @@ strong {
 /* --- POSITIONNEMENT --- */
 
 /* Page */
-body {
-    padding: 30px 10px 0 10px;
-}
 #global {
     width: 90%;
     overflow: hidden; /* -> 2 */
@@ -263,18 +219,14 @@ body {
     margin-right: auto; /* -> 4 */
 }
 
-/* En-tête */
-#entete {
-    padding: 20px;
-}
-#entete h1 {
+#header h1 {
     margin: 0;
 }
-#entete h1 img {
+#header h1 img {
     float: left;
     margin: 7px 20px 10px 0;
 }
-#entete .sous-titre {
+#header .sous-titre {
     margin: 4px 0 15px 0;
 }
 
@@ -320,16 +272,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
 //   /$$      /$$ /$$$$$$ /$$   /$$ /$$$$$$$$
 //  | $$$    /$$$|_  $$_/| $$$ | $$| $$_____/
 //  | $$$$  /$$$$  | $$  | $$$$| $$| $$      
@@ -341,18 +283,7 @@ body {
 
 body 
 {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background:url(images/hoffman.png);
-    .body-content 
-    {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-    input, select, textarea 
-    {
-        max-width: 280px;
-    }
+
 }
 
 .field-validation-error {
