@@ -8,10 +8,12 @@
 //  | $$  \ $$| $$  | $$ /$$  \ $$| $$      
 //  | $$$$$$$/| $$  | $$|  $$$$$$/| $$$$$$$$
 //  |_______/ |__/  |__/ \______/ |________/
-html {
+html 
+{
     font-size: 100%;
 }
-body {
+body 
+{
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: .8em;
@@ -23,298 +25,108 @@ body {
         max-width: 280px;
     }
     color: @globalColor;
-    border-top: 4px solid @globalColor;
-}
 
-/* Titres */
-h1, h2, h3, h4, h5, h6 {
-    margin: 1em 0 .5em 0; /* -> 6 */
-}
-h1 {
-    font-size: 3em; /* -> 8 */
-    font-style: italic;
-}
-h2 {font-size: 1.8em;}
-h3 {font-size: 1.2em;}
-h4 {font-size: 1em;}
-
-/* Listes */
-ul, ol {
-    margin: .75em 0 .75em 24px;
-    padding: 0; /* -> 9 */
-}
-ul {
-    list-style: square;
-}
-li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Paragraphes */
-p {
-    margin: .75em 0;
-}
-li p, blockquote p {
-    margin: .5em 0;
-}
-
-/* Citations */
-blockquote, q {
-    font-size: 1.1em;
-    font-style: italic;
-    font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
-}
-blockquote {
-    margin: .75em 0 .75em 24px;
-}
-cite {
-    font-style: italic;
-}
-
-/* Liens */
-a {
-    color: mediumblue;
-    text-decoration: underline;
-}
-a:hover, a:focus {
-    color: crimson;
-}
-a img {
-    border: none; /* -> 10 */
-}
-
-/* Divers éléments de type en-ligne */
-em {
-    font-style: italic;
-}
-strong {
-    font-weight: bold;
-    color: dimgray;
-}
-
-
-/* --- STYLES POUR CERTAINS CONTENUS DES GABARITS --- */
-
-pre, code {
-    font-size: 100%;
-    font-family: "Bitstream Vera Mono", "Lucida Console", "Courier New", monospace;
-}
-pre {
-    width: 90%;
-    overflow: auto;
-    overflow-y: hidden;
-    margin: .75em 0;
-    padding: 12px;
-    background: #eee;
-    color: #555;
-}
-pre strong {
-    font-weight: normal;
-    color: black;
-}
-#copyright {
-    margin: 20px 0 5px 0;
-    text-align: right;
-    font-size: .8em;
-    color: #848F63;
-}
-#copyright a {
-    color: #848F63;
-    text-decoration: none;
-}
-#copyright a:hover, #copyright a:focus {
-    text-decoration: underline;
-}
-
-//    /$$$$$$   /$$$$$$  /$$$$$$$ 
-//   /$$__  $$ /$$__  $$| $$__  $$
-//  | $$  \__/| $$  \ $$| $$  \ $$
-//  | $$ /$$$$| $$$$$$$$| $$$$$$$ 
-//  | $$|_  $$| $$__  $$| $$__  $$
-//  | $$  \ $$| $$  | $$| $$  \ $$
-//  |  $$$$$$/| $$  | $$| $$$$$$$/
-//   \______/ |__/  |__/|_______/ 
-#header 
-{
-    #sub-header 
+    #header 
     {
-        height: 80px;
-        min-width: 700px;
-        max-width: 1000px;
-        margin: 0 auto;
-        position: relative;
-        border-bottom: solid 1px #EAEAEA;
-        background: @contentBgColor;
-        
-        #logo
+        position: fixed;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+    border-top: 4px solid @globalColor;
+        #sub-header 
         {
-            width: 80px;
-            height: 80px;
-            display: inline-block;
-            background: url(./images/logo_80.png) @globalColor no-repeat;
-            float:left;
-        }
-        nav 
-        {
-            margin: 0 0 0 20px;
-            float:left;
-            a 
+            height: @headerHeight;
+            min-width: 700px;
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            border-bottom: solid 1px #EAEAEA;
+            background: @contentBgColor;
+            
+            #logo
             {
-                font-size: 14px;
+                width: @headerHeight;
+                height: @headerHeight;
+                display: inline-block;
+                background: url(./images/logo_80.png) @globalColor no-repeat;
                 float:left;
-                display:block;
-                height: 80px;
-                line-height: 80px;
-                margin: 0 0 0 0;
-                padding: 0 15px;
-                color: @navLinkColor;
-                border-right: solid 1px #EAEAEA;
-                text-decoration: none;
-                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-                &:hover
+            }
+            nav 
+            {
+                margin: 0 0 0 20px;
+                float:left;
+                a 
                 {
-                    color:@navLinkColorHover;
+                    font-size: 14px;
+                    float:left;
+                    display:block;
+                    height: @headerHeight;
+                    line-height: @headerHeight;
+                    margin: 0 0 0 0;
+                    padding: 0 15px;
+                    color: @navLinkColor;
+                    border-right: solid 1px #EAEAEA;
+                    text-decoration: none;
+                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    &:hover
+                    {
+                        color:@navLinkColorHover;
 
+                    }
                 }
             }
         }
+        
     }
-    
-}
-#global {
-    color: @globalColor;
-    background: @white;
 
-}
+    #global 
+    {
+        color: @globalColor;
+        overflow: hidden;
+        min-width: 700px;
+        max-width: 1000px;
 
-/* Contenu principal */
-#contenu {
-    color: @contentTextColor;
-    background: url(./images/06-coin.png) no-repeat left top;
-}
-#contenu a {
-    color: @linkColor;
-}
-#contenu a::after {
-    content: " »";
-}
-#contenu a:hover, #contenu a:focus {
-    color: @linkHoverColor;
-}
-#contenu strong {
-    color: @contentBgColor;
-}
+        margin: 0 auto;
+        padding: 0 10px 0 10px;
+        overflow: hidden;
 
+        #content 
+        {
+            background: @white;
+            color: @contentTextColor;
+            margin-top: 110px;
+            padding: 10px 20px 10px 40px;
 
-/* --- POSITIONNEMENT --- */
+            & > :first-child 
+            {
+                margin-top: 10px;
+            }
+            a 
+            {
+                color: @white;
+                background-color:@globalColor;
+                display:inline-block;
+                padding:3px 5px;
+                text-decoration: none;
+                .borderradius();
+                border:1px solid @globalColor;
+                transition: background 200ms;
 
-/* Page */
-#global {
-    width: 90%;
-    overflow: hidden; /* -> 2 */
-    min-width: 700px;
-    max-width: 1000px; /* -> 3 */
-    margin-left: auto;
-    margin-right: auto; /* -> 4 */
+                &:hover, &:focus 
+                {
+                    color: @globalColor;
+                    background-color:@white;
+                    display:inline-block;
+                    padding:3px 5px;
+                    text-decoration: none;
+                    .borderradius();
+                    border:1px solid @globalColor;
+
+                }
+            }
+            p, li { line-height: 1.5; }
+        }
+    }
 }
-
-#header h1 {
-    margin: 0;
-}
-#header h1 img {
-    float: left;
-    margin: 7px 20px 10px 0;
-}
-#header .sous-titre {
-    margin: 4px 0 15px 0;
-}
-
-/* Menu de navigation */
-#navigation {
-    width: 180px;
-    float: left; /* -> 5 */
-}
-#navigation ul {
-    margin: 0;
-    padding: 20px 10px;
-    list-style: none;
-}
-#navigation a {
-    display: block;
-    height: 1%; /* -> 6 */
-    padding: 6px 6px 6px 10px;
-    line-height: 1.5;
-    font-size: .9em;
-    text-decoration: none;
-}
-
-/* Contenu */
-#contenu {
-    margin-left: 220px; /* -> 7 */
-    padding: 10px 20px 10px 40px;
-}
-#contenu > :first-child {
-    margin-top: 10px;
-}
-#contenu p, #contenu li {
-    line-height: 1.5;
-}
-
-/* Mention de copyright */
-#copyright {
-    width: 180px;
-    margin: 0;
-    padding: 0 0 10px 20px;
-    text-align: left;
-}
-
-
-
-
-//   /$$      /$$ /$$$$$$ /$$   /$$ /$$$$$$$$
-//  | $$$    /$$$|_  $$_/| $$$ | $$| $$_____/
-//  | $$$$  /$$$$  | $$  | $$$$| $$| $$      
-//  | $$ $$/$$ $$  | $$  | $$ $$ $$| $$$$$   
-//  | $$  $$$| $$  | $$  | $$  $$$$| $$__/   
-//  | $$\  $ | $$  | $$  | $$\  $$$| $$      
-//  | $$ \/  | $$ /$$$$$$| $$ \  $$| $$$$$$$$
-//  |__/     |__/|______/|__/  \__/|________/
-
-body 
-{
-
-}
-
-.field-validation-error {
-    color: #b94a48;
-}
-
-.field-validation-valid {
-    display: none;
-}
-
-input.input-validation-error {
-    border: 1px solid #b94a48;
-}
-
-input[type="checkbox"].input-validation-error {
-    border: 0 none;
-}
-
-.validation-summary-errors {
-    color: #b94a48;
-}
-
-.validation-summary-valid {
-    display: none;
-}
-
-footer 
-{
-    font-size:0.4em;
-}
-
 
 //   /$$       /$$$$$$$$  /$$$$$$   /$$$$$$   /$$$$$$  /$$   /$$
 //  | $$      | $$_____/ /$$__  $$ /$$__  $$ /$$__  $$| $$$ | $$
