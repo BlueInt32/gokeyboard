@@ -8,6 +8,7 @@
 //  | $$  \ $$| $$  | $$ /$$  \ $$| $$      
 //  | $$$$$$$/| $$  | $$|  $$$$$$/| $$$$$$$$
 //  |_______/ |__/  |__/ \______/ |________/
+* { box-sizing:border-box; }
 html 
 {
     font-size: 100%;
@@ -19,7 +20,7 @@ body
     font-size: .8em;
     line-height: 1.25;
     padding-bottom: 20px;
-    background:url(images/hoffman.png);
+    background:url(images/sos.png);
     input, select, textarea 
     {
         max-width: 280px;
@@ -29,14 +30,15 @@ body
     #header 
     {
         position: fixed;
+        top: 0;
         width: 100%;
         background-color: rgba(255, 255, 255, 0.9);
-    border-top: 4px solid @globalColor;
+        border-top: 4px solid @globalColor;
         #sub-header 
         {
             height: @headerHeight;
             min-width: 700px;
-            max-width: 1000px;
+            max-width: @siteWidth;
             margin: 0 auto;
             position: relative;
             border-bottom: solid 1px #EAEAEA;
@@ -44,15 +46,23 @@ body
             
             #logo
             {
-                width: @headerHeight;
+                width: 167px;
                 height: @headerHeight;
-                display: inline-block;
-                background: url(./images/logo_70.png) @globalColor no-repeat;
+                background-color: @globalColor;
+                padding: 5px 10px 0px 10px;
                 float:left;
+                
+                img
+                {
+                    width:100%;
+                    max-width:100%;
+                    height: auto;
+                }
+
             }
             nav 
             {
-                margin: 0 0 0 20px;
+                margin: 0;
                 float:left;
                 a 
                 {
@@ -83,48 +93,101 @@ body
         color: @globalColor;
         overflow: hidden;
         min-width: 700px;
-        max-width: 1000px;
+        max-width: @siteWidth;
 
         margin: 0 auto;
         padding: 0 10px 0 10px;
         overflow: hidden;
 
-        #content 
-        {
-            background: @white;
-            color: @contentTextColor;
             margin-top: 110px;
-            padding: 10px 20px 10px 40px;
 
+        section
+        {
+            color: @contentTextColor;
+            background: @white;
+            padding: 10px 20px 10px 20px;
             & > :first-child 
             {
                 margin-top: 10px;
             }
-            a 
-            {
-                color: @white;
-                background-color:@globalColor;
-                display:inline-block;
-                padding:3px 5px;
-                text-decoration: none;
-                .borderradius();
-                border:1px solid @globalColor;
-                transition: background 200ms;
 
-                &:hover, &:focus 
+
+            &#page-sidebar
+            {
+                float:right;
+                width: 37%;
+                margin-left:3%;
+                div#progressBlock
+                {
+                    width: 350px;
+                    canvas { max-width:176px; }
+                }
+
+            }
+            &#page-maincontent 
+            {
+                float:left;
+                width: 60%;
+                a 
                 {
                     color: @globalColor;
-                    background-color:@white;
                     display:inline-block;
+                    background-color:@white;
                     padding:3px 5px;
                     text-decoration: none;
-                    .borderradius();
                     border:1px solid @globalColor;
+                    transition: background 200ms;
 
+                    &::after
+                    { 
+                        content:url(images/arrow.png);
+                        display:inline-block;
+                        transition: all 150ms;
+                        width:0px;
+                        position:relative;
+                        left:-150px;
+                        top:3px;
+                        opacity: 0;
+                    }
+                    &:hover, &:focus 
+                    {                    
+                        color: @white;
+                        background-color:@globalColor;
+                        display:inline-block;
+                        padding:3px 5px;
+                        text-decoration: none;
+                        border:1px solid @globalColor;
+                        &::after
+                        {
+                            transition: all 150ms;
+                            position: relative;
+                            opacity: 1;
+                            width:30px;
+                            left:13px;
+                        }
+                    }
                 }
+                h2 
+                { 
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 300;
+                    color:@globalColor;
+                }
+                p, li { line-height: 1.5; }
             }
-            p, li { line-height: 1.5; }
         }
+        footer
+        {
+            p{margin-top:20px;}
+            clear:both;
+            color: @globalColor;
+            width: 60%;
+            background: @white;
+            padding: 10px 20px 10px 20px;
+        }
+       
+
+
     }
 }
 

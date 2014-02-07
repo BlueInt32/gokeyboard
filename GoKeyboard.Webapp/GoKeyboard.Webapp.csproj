@@ -233,6 +233,7 @@
     <Content Include="Views\Partials\KeyboardKey.cshtml" />
     <Content Include="Views\Home\Conseils.cshtml" />
     <Content Include="Views\Partials\PreLessonPopin.cshtml" />
+    <Content Include="Views\Partials\ProgressBlock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Tools\Tools.csproj">

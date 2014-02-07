@@ -3,15 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>@ViewBag.Title</title>
+		<title>Go Keyboard</title>
 		@Styles.Render("~/Content/css")
+        <style type="text/css">
+            @@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800");
+        </style>
 		@Scripts.Render("~/bundles/modernizr")
 	</head>
 
 <body>
     <div id="header">
         <div id="sub-header">
-            <div id="logo"></div>
+            <div id="logo"><img src="@Url.Content("~/content/images/logo-colibri_b.png")" alt="Go Keyboard" /></div>
             <nav>
                 <a href="/">Accueil</a>
                 <a href="/Home/ChaptersList">Les leçons</a>
@@ -20,15 +23,17 @@
         </div>
     </div>
 	<div id="global">
-		<div id="content">
-			@RenderBody()
-		</div>
+        <section id="page-maincontent">
+            @RenderBody()
+        </section>
+        <section id="page-sidebar">
+            @Html.Partial("~/Views/Partials/ProgressBlock.cshtml")
 
-		<hr>
-		<footer>
-			<p>© 2014 - Go Keyboard</p>
-		</footer>
-	</div>
+        </section>
+        <footer>
+            <p>© 2014 - Go Keyboard</p>
+        </footer>
+</div>
 	@Scripts.Render("~/bundles/jquery")
 	@Scripts.Render("~/bundles/misc")
 	@RenderSection("scripts", required: false)

@@ -10,6 +10,8 @@
 *.cache
 *.suo
 *.user
+*.mdf
+*.ldf
 GoKeyboard.Webapp/Content/Site.css
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
