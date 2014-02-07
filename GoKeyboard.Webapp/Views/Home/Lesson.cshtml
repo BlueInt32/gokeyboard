@@ -6,15 +6,12 @@
 }
 @*<div id="chartdebugPlaceHolder"></div>*@
 <div id="lesson">
-    <h1>@Model.Name</h1>
+    <h2>Leçon : @Model.Name</h2>    
+    @{int pageIndex = 0; int nextLesson = @Model.GkLessonId + 1; int charIndex = 0;}
+    <a href="javascript:window.location.href = window.location.href;" class="btn btn-default">Réessayer</a>
+    <a href="@Url.Action("Lesson", new { id = nextLesson })" class="btn btn-default">Leçon suivante</a>
     <div class="row">
-        @{int pageIndex = 0; int nextLesson = @Model.GkLessonId + 1; int charIndex = 0;}
-        <div class="col-md-3">
-            <input class="infinite" data-width="100%" data-height="100%" data-thickness="0.05" data-fgcolor="#6f80b7" data-bgcolor="#FFFFFF" data-readonly=true data-max="180">
-            <input class="bonus" data-width="50%" data-height="50%" data-thickness="0.25" data-fgcolor="#ffc600" data-bgcolor="#FFFFFF" data-readonly=true data-max="@Model.CharsAmount" data-displayinput="true">
-            <span id="timer"></span>
-        </div>
-        <div class="col-md-9">
+        <div>
             @foreach (GkLessonPage lessonPage in @Model.LessonPages)
             {
                 pageIndex++;
@@ -26,12 +23,7 @@
                     }
                 </div>
             }
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="col-md-8">@Html.Partial("~/Views/Partials/KeyboardHelper.cshtml", new KeyboardHelperViewModel(Model))</div>
-                    <div class="col-md-2"></div>
-
-                </div>
+            @Html.Partial("~/Views/Partials/KeyboardHelper.cshtml", new KeyboardHelperViewModel(Model))
         </div>
         <div class="endpage">
             <h2>Bravo ! </h2>
@@ -42,10 +34,7 @@
         </div>
         @Html.Partial("~/Views/Partials/PreLessonPopin.cshtml")
     </div>
-    <a href="@Url.Action("Index")" class="btn btn-default">Menu principal</a>
-    <a href="javascript:window.location.href = window.location.href;" class="btn btn-default">Réessayer</a>
-    <a href="@Url.Action("Lesson", new { id = nextLesson })" class="btn btn-default">Leçon suivante</a>
-    <a href="javascript:nextPage();" class="btn btn-default">Page suivante</a>
+    
 
     @section scripts
 {

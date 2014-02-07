@@ -17,7 +17,7 @@ body
 {
     margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: .8em;
+    font-size: 16px;
     line-height: 1.25;
     padding-bottom: 20px;
     background:url(images/sos.png);
@@ -135,7 +135,7 @@ body
                     background-color:@white;
                     padding:3px 5px;
                     text-decoration: none;
-                    border:1px solid @globalColor;
+                    border:2px solid @globalColor;
                     transition: background 200ms;
 
                     &::after
@@ -156,7 +156,7 @@ body
                         display:inline-block;
                         padding:3px 5px;
                         text-decoration: none;
-                        border:1px solid @globalColor;
+                        border:2px solid @globalColor;
                         &::after
                         {
                             transition: all 150ms;
@@ -203,37 +203,35 @@ body
 { 
     margin:0px auto; 
 	width: 100%;
-    font-size:32px; 
-    background-color: #EEE;
     .borderradius(5px);
-    padding: 30px;
+    padding: 10px;
     #timer { font-size:0.5em; display:none; }
-    h1 { font-size:45px;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
-    h2 {font-size:1em;}
+
     p {font-size:0.6em;}
     #chartplaceholder { width:400px; height: 300px;}
 
     .page 
     {
-        .borderradius(5px);
+        //.borderradius(5px);
         border:1px solid #999;
-        margin:  0px 0px 20px 0px;
-        padding:0px 10px 0px;
-        background: #EEE;
+        margin:  10px 0px 20px 0px;
+        padding: 10px 10px 10px 10px;
+        background: #F5F5F5;
+        .boxshadow(3px; 3px; 1px; 0; rgba(0,0,0,0.2);inset);
         span
         {
             //background: #75a4bf;
             font-family: "Lucida Console";
-            line-height: 40px;
-            margin: 13px -9px 0 0;
-            padding: 0 2px 0 2px;
-            //padding: 5px;
+            line-height: 37px;
+            font-size: 2em;
+            margin: 13px 0px 0 0;
+            padding: 0;
             transition: background 0.15s;
-            //width: 29px;
-            display: inline-block;
-            .borderradius;
+            
+            .borderradius(2px);
             &.activeItem
             {
+                color:@white;
                 background: @currentItemBlue;
                 //border-left: 4px solid @currentItemBlue;
                 transition: background 0.15s;
