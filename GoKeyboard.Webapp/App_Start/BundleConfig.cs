@@ -18,7 +18,7 @@ namespace GoKeyboardRest.Api
 
             bundles.Add(new ScriptBundle("~/bundles/misc").Include(
 					  //"~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
+                      //"~/Scripts/respond.js",
 					  "~/Scripts/jquery.knob.js",
 					  "~/Scripts/popin.js"));
 
