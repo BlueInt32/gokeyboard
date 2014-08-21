@@ -10,17 +10,17 @@ namespace GoKeyboardRest.Api.Models
 {
     public class KeyboardHelperViewModel
     {
-        public GkLesson Lesson { get; set; }
+        public Lesson Lesson { get; set; }
 
         //public const string allkeys = "&é\"'(-è_çà)=azertyuiopqsdfghjklmwxcvbn ";
         //public SortedList<int, string> rows = new SortedList<int, string> { { 1, "&é\"'(-è_çà)=" }, { 2, "azertyuiop" }, { 3, "qsdfghjklm" }, { 4, "wxcvbn" }, { 5, " " } };
 
         public List<KeyboardHelperKeyViewModel> KeyModels { get; set; }
 
-        public KeyboardHelperViewModel(GkLesson lesson)
+        public KeyboardHelperViewModel(Lesson lesson)
         {
-            GkKeysDal kdal = new GkKeysDal();
-            IEqualityComparer<GkKey> comparer = new GkKeyEqualityComparer();
+            KeysDal kdal = new KeysDal();
+            IEqualityComparer<Key> comparer = new GkKeyEqualityComparer();
             KeyModels = kdal
                 .GetKeys()
                 .Where(k => !k.Shifted && !k.AltGred)
@@ -34,7 +34,7 @@ namespace GoKeyboardRest.Api.Models
                            );
         }
 
-        private string GetRowClass(GkKey key)
+        private string GetRowClass(Key key)
         {
             return string.Format("row{0}", key.LineIndex);
         }

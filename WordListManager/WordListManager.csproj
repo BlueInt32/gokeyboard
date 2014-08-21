@@ -49,10 +49,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\Tools.csproj">
-      <Project>{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GoKeyboard.DTO\GoKeyboard.DTO.csproj">
       <Project>{ff79ad08-d8b8-4070-a623-d0ea48d5bfe2}</Project>
       <Name>GoKeyboard.DTO</Name>

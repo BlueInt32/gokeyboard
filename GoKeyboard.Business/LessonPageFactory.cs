@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 using GoKeyboard.DTO;
-using Tools;
 using WordListManager;
 
 namespace GoKeyboard.Business
@@ -22,9 +21,9 @@ namespace GoKeyboard.Business
 
 	    private List<string> _realWordsList = new List<string>();
 
-        public OperationResult<GkLesson> BuildPages(GkLesson lesson)
+        public Lesson BuildPages(Lesson lesson)
         {
-            lesson.LessonPages = new List<GkLessonPage>();
+            lesson.LessonPages = new List<LessonPage>();
 
 
             // Premiere page avec seulement les caractères à travailler
@@ -44,35 +43,14 @@ namespace GoKeyboard.Business
 				lesson.LessonPages.Add(CreateAMixedPage(knownCharSet, 1, 4));
 	        }
 	        
-            return OperationResult<GkLesson>.OkResultInstance(lesson);
+            return lesson;
         }
 
-	    private void BuildWordsListIfNeeded(string charSet)
+	    
+
+		private LessonPage CreateAMixedPage(string charSet, int falseWordsAmount, int realWordsAmount)
 	    {
-			int currentLineLength = 0;
-			string orderedCharsSet = String.Concat(charSet.OrderBy(c => c));
-			if (!File.Exists(HttpContext.Current.Server.MapPath(String.Format("~/WordsData/{0}.txt", orderedCharsSet))))
-			{
-				string content =
-					FileHelper.ReadFile(
-						Path.GetFullPath(HttpContext.Current.Server.MapPath("~/WordsData/liste_mots_fr_Bigger.txt")));
-				List<string> words = content.Split('\n').ToList();
-				//List<string> words = wordsFreq.Select(w => w.Split('\t')[0]).ToList();
-
-				List<string> filteredList = ProgramWordManager.FiltersByChars(words, charSet);
-				string fileContent = string.Join(",", filteredList.ToArray());
-				FileHelper.TextAppendToFile(HttpContext.Current.Server.MapPath(string.Format("~/WordsData/{0}.txt", orderedCharsSet)), fileContent);
-			}
-
-			string strWords = FileHelper.ReadFile(HttpContext.Current.Server.MapPath(String.Format("~/WordsData/{0}.txt", orderedCharsSet)));
-
-			strWords = Regex.Replace(strWords, @"\s", "");
-			_realWordsList = strWords.Split(',').ToList();
-	    }
-
-		private GkLessonPage CreateAMixedPage(string charSet, int falseWordsAmount, int realWordsAmount)
-	    {
-		    GkLessonPage returnPage = new GkLessonPage();
+		    LessonPage returnPage = new LessonPage();
 		    int probaTotal = falseWordsAmount + realWordsAmount;
 		    StringBuilder sb = new StringBuilder();
 			int lineLength = 0;

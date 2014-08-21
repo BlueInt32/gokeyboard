@@ -9,7 +9,7 @@ namespace GoKeyboard.Business
 {
     public static class KeysHelper
     {
-        public static string GkToString(this ICollection<GkKey> gkkeysList)
+        public static string GkToString(this ICollection<Key> gkkeysList)
         {
             return gkkeysList.Aggregate(string.Empty, (a, b) => string.Concat(a, b.Print));
         }

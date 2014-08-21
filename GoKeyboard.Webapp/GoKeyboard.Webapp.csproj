@@ -42,6 +42,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BlueInt32.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\BlueInt32.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BlueInt32.Mvc">
+      <HintPath>..\Libs\BlueInt32.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="dotless.Core">
       <HintPath>..\packages\dotless.1.3.1.0\lib\dotless.Core.dll</HintPath>
     </Reference>
@@ -236,10 +243,6 @@
     <Content Include="Views\Partials\ProgressBlock.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\Tools.csproj">
-      <Project>{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GoKeyboard.Business\GoKeyboard.Business.csproj">
       <Project>{6674cb0c-b807-4803-a2a5-5572d68eef70}</Project>
       <Name>GoKeyboard.Business</Name>

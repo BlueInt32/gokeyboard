@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace GoKeyboard.Business
 {
-    public class GkKeyEqualityComparer : IEqualityComparer<GkKey>
+    public class GkKeyEqualityComparer : IEqualityComparer<Key>
     {
 
-        bool IEqualityComparer<GkKey>.Equals(GkKey x, GkKey y)
+        bool IEqualityComparer<Key>.Equals(Key x, Key y)
         {
             return x.Id == y.Id;
         }
 
-        int IEqualityComparer<GkKey>.GetHashCode(GkKey obj)
+        int IEqualityComparer<Key>.GetHashCode(Key obj)
         {
             return obj.Token.GetHashCode();
         }

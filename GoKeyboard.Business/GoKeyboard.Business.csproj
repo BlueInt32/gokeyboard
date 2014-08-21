@@ -44,12 +44,10 @@
     <Compile Include="KeysHelper.cs" />
     <Compile Include="LessonPageFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WordsParser.cs" />
+    <Compile Include="WordsParsers\FrenchWordsParser.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\Tools.csproj">
-      <Project>{7430f9d1-a88e-4ae2-9eec-1c03f3a87020}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GoKeyboard.DTO\GoKeyboard.DTO.csproj">
       <Project>{ff79ad08-d8b8-4070-a623-d0ea48d5bfe2}</Project>
       <Name>GoKeyboard.DTO</Name>

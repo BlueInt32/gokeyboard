@@ -23,7 +23,7 @@ namespace GoKeyboardRest.Api
 					  "~/Scripts/popin.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/site.css"));
+                      "~/Content/Site.css"));
         }
     }
 }

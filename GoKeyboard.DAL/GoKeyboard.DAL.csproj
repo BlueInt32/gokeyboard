@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BlueInt32.Core">
+      <HintPath>..\Libs\BlueInt32.Core.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
@@ -38,8 +41,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -52,20 +54,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration.cs" />
-    <Compile Include="DataContext.cs" />
-    <Compile Include="DataInitializer.cs" />
-    <Compile Include="GkKeysDal.cs" />
-    <Compile Include="GkLessonDal.cs" />
-    <Compile Include="StaticDataFactory.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="GoKeyboardDbContext.cs" />
+    <Compile Include="DAL\KeysDal.cs" />
+    <Compile Include="DAL\LessonsDal.cs" />
+    <Compile Include="KeyboardDalException.cs" />
+    <Compile Include="SeedLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GkUserDal.cs" />
+    <Compile Include="DAL\UserDal.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Tools\Tools.csproj">
-      <Project>{7430F9D1-A88E-4AE2-9EEC-1C03F3A87020}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
     <ProjectReference Include="..\GoKeyboard.DTO\GoKeyboard.DTO.csproj">
       <Project>{FF79AD08-D8B8-4070-A623-D0EA48D5BFE2}</Project>
       <Name>GoKeyboard.DTO</Name>
@@ -77,9 +75,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

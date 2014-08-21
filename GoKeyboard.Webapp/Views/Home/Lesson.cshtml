@@ -1,18 +1,18 @@
 ﻿@using GoKeyboard.DTO   
 @using GoKeyboardRest.Api.Models
-@model GoKeyboard.DTO.GkLesson
+@model GoKeyboard.DTO.Lesson
 @{
     ViewBag.Title = "Index";
 }
 @*<div id="chartdebugPlaceHolder"></div>*@
 <div id="lesson">
     <h2>Leçon : @Model.Name</h2>    
-    @{int pageIndex = 0; int nextLesson = @Model.GkLessonId + 1; int charIndex = 0;}
+    @{int pageIndex = 0; int nextLesson = @Model.LessonId + 1; int charIndex = 0;}
     <a href="javascript:window.location.href = window.location.href;" class="btn btn-default">Réessayer</a>
     <a href="@Url.Action("Lesson", new { id = nextLesson })" class="btn btn-default">Leçon suivante</a>
     <div class="row">
         <div>
-            @foreach (GkLessonPage lessonPage in @Model.LessonPages)
+            @foreach (LessonPage lessonPage in @Model.LessonPages)
             {
                 pageIndex++;
                 <div class="page">
@@ -47,9 +47,9 @@
         <script>
             var sounds =
             {
-                "win": '@Url.Content("~/Content/Sounds/new/win.mp3")',
-            	"miss": '@Url.Content("~/Content/Sounds/new/miss.mp3")',
-            	"kk" : '@Url.Content("~/Content/Sounds/new/tic.wav")',
+                "win": '@Url.Content("~/Content/Sounds/win.mp3")',
+            	"miss": '@Url.Content("~/Content/Sounds/miss.mp3")',
+            	"kk" : '@Url.Content("~/Content/Sounds/tic.mp3")',
             };
 
             $(function ()

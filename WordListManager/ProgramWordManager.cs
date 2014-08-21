@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tools;
 
 namespace WordListManager
 {
@@ -13,13 +13,14 @@ namespace WordListManager
         {
             string wordsFile = args[0];
             string strChars = args[1];
-            string content = FileHelper.ReadFile(System.IO.Path.GetFullPath(wordsFile));
+			string content = File.ReadAllText(Path.GetFullPath(wordsFile));
             List<string> wordsFreq = content.Split('\n').ToList();
             List<string> words = wordsFreq.Select(w => w.Split('\t')[0]).ToList();
 
             List<string> filteredList = FiltersByChars(words, strChars);
             string fileContent = string.Join(",", filteredList.ToArray());
-            FileHelper.TextAppendToFile(System.IO.Path.GetFullPath(string.Format("{0}.txt", strChars)), fileContent);
+
+			File.AppendAllText(Path.GetFullPath(string.Format("{0}.txt", strChars)), fileContent);
 
         }
 

@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using GoKeyboard.DAL;
 using GoKeyboard.DTO;
-using Tools;
 using System.Net.NetworkInformation;
 using System.Text;
 using GoKeyboard.Business;
@@ -42,8 +41,8 @@ namespace GoKeyboardRest.Api.Controllers
 
         public ActionResult ChaptersList()
         {
-            GkLessonDal gld = new GkLessonDal();
-            List<GkChapter> list = gld.GetChapters();
+            LessonsDal gld = new LessonsDal();
+            List<Chapter> list = gld.GetChapters();
 
             return View(list);
             
@@ -52,20 +51,20 @@ namespace GoKeyboardRest.Api.Controllers
 
         public ActionResult LessonsList(int id)
         {
-            GkLessonDal gld = new GkLessonDal();
-            List<GkLesson> list = gld.GetLessons(id);
+            LessonsDal gld = new LessonsDal();
+            List<Lesson> list = gld.GetLessons(id);
 
             return View(list);
         }
 
         public ActionResult Lesson(int id)
         {
-	        GkLessonDal dal = new GkLessonDal();
-			GkLesson lesson = dal.Retrieve(id).ReturnObject;
+	        LessonsDal dal = new LessonsDal();
+			Lesson lesson = dal.Retrieve(id);
             LessonPageFactory lpFactory = new LessonPageFactory();
-            OperationResult<GkLesson> building = lpFactory.BuildPages(lesson);
+            Lesson builtLesson = lpFactory.BuildPages(lesson);
 
-            return View(building.ReturnObject);
+			return View(builtLesson);
         }
 
 	    public ActionResult Stats()

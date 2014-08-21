@@ -9,7 +9,7 @@ namespace WordListManager
 {
     public class ProgramAsciiCreator
     {
-        SortedList<int, GkKey> GkKeys { get; set; }
+        SortedList<int, Key> GkKeys { get; set; }
         public ProgramAsciiCreator()
         {
             #region GkKeys

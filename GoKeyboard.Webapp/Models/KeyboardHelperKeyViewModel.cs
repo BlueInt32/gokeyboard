@@ -8,7 +8,7 @@ namespace GoKeyboardRest.Api.Models
 {
     public class KeyboardHelperKeyViewModel
     {
-        public GkKey Key { get; set; }
+        public Key Key { get; set; }
         //public string ReadableKey
         //{
         //    get
