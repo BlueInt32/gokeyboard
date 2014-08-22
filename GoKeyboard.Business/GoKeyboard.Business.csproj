@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyPath.cs" />
     <Compile Include="GkKeyEqualityComparer.cs" />
     <Compile Include="KeysHelper.cs" />
     <Compile Include="LessonPageFactory.cs" />
